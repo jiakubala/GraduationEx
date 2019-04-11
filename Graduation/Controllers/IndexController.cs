@@ -1,6 +1,7 @@
 ﻿using Graduation.Filter;
 using Graduation.Managers;
 using log4net;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,6 @@ namespace Graduation.Controllers
     /// <summary>
     /// 首页服务层
     /// </summary>
-    [Route("api/[controller]")]
-    [ApiController]
     public class IndexController : Controller
     {
         private readonly IndexManager _indexManager;
@@ -24,11 +23,18 @@ namespace Graduation.Controllers
             _indexManager = indexManager;
         }
 
+        /// <summary>
+        /// 商品列表（首页）
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [TypeFilter(typeof(SessionFilter))]
         public IActionResult Goodlist ()
         {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 商品列表");
             return View();
         }
+
     }
 }

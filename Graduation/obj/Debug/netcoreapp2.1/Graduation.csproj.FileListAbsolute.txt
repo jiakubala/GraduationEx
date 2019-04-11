@@ -40,7 +40,6 @@ G:\.net core\Graduation\GraduationEx\Graduation\bin\Debug\netcoreapp2.1\Graduati
 G:\.net core\Graduation\GraduationEx\Graduation\bin\Debug\netcoreapp2.1\Graduation.pdb
 G:\.net core\Graduation\GraduationEx\Graduation\bin\Debug\netcoreapp2.1\Graduation.Views.dll
 G:\.net core\Graduation\GraduationEx\Graduation\bin\Debug\netcoreapp2.1\Graduation.Views.pdb
-G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.csprojAssemblyReference.cache
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.csproj.CoreCompileInputs.cache
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.RazorAssemblyInfo.cache
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.RazorAssemblyInfo.cs
@@ -68,3 +67,4 @@ G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduati
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ViewStart.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Login\Register.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Index\goodlist.g.cshtml.cs
+G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.csprojAssemblyReference.cache

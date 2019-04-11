@@ -113,3 +113,42 @@
   "name": "zzz",
   "sex": "男"
 }</format><args>{}</args></log4net.Error>
+2019-04-11 17:29:30,376 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:29:33,827 [10] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:29:34,572 [3] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-11 17:29:34,662 [3] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-11 17:29:35,840 [14] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:29:39,488 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:29:39,547 [8] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-11 17:29:39,583 [8] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-11 17:29:40,867 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:47:11,396 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:47:15,341 [9] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:47:34,675 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:48:19,390 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:48:27,194 [9] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 17:48:27,967 [14] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-11 17:48:30,225 [14] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-11 17:48:43,396 [7] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-11 17:49:17,234 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证

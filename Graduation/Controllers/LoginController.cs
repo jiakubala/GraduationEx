@@ -33,6 +33,7 @@ namespace Graduation.Controllers
         [HttpGet]
         public IActionResult Loginin()
         {
+            log.InfoFormat(" || Get into 登陆验证");
             return View();
         }
 
@@ -79,6 +80,7 @@ namespace Graduation.Controllers
         [HttpGet]
         public IActionResult Register()
         {
+            log.InfoFormat(" || Get into 登陆验证");
             return View();
         }
 
