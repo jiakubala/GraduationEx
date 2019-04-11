@@ -1,0 +1,8 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=localhost;UserId=root;Password=root1;Database=graduationproject"
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+﻿2019-04-11 10:51:03,423 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 10:51:05,315 [7] WARN  Graduation.Controllers.LoginController [(null)] - 登录验证模型验证失败
+2019-04-11 10:56:41,959 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 10:57:31,840 [14] ERROR Graduation.Controllers.LoginController [(null)] - 登陆验证失败,错误提示: {
+  "ClassName": "System.InvalidOperationException",
+  "Message": "Session has not been configured for this application or request.",
+  "Data": {},
+  "InnerException": null,
+  "HelpURL": null,
+  "StackTraceString": "   at Microsoft.AspNetCore.Http.DefaultHttpContext.get_Session()\r\n   at Graduation.Controllers.LoginController.Loginjudge(User user) in G:\\.net core\\Graduation\\Graduation\\Graduation\\Controllers\\LoginController.cs:line 61",
+  "RemoteStackTraceString": null,
+  "RemoteStackIndex": 0,
+  "ExceptionMethod": null,
+  "HResult": -2146233079,
+  "Source": "Microsoft.AspNetCore.Http",
+  "WatsonBuckets": null
+}
+2019-04-11 10:59:32,045 [10] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 10:59:40,153 [3] INFO  Graduation.Controllers.LoginController [(null)] - 登陆验证成功"zzz"
+2019-04-11 11:00:37,168 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 11:00:42,931 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-11 11:00:43,108 [13] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
