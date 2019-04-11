@@ -1,4 +1,5 @@
-﻿using Graduation.Managers;
+﻿using Graduation.Filter;
+using Graduation.Managers;
 using log4net;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -21,6 +22,13 @@ namespace Graduation.Controllers
         public IndexController(IndexManager indexManager)
         {
             _indexManager = indexManager;
+        }
+
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public IActionResult Goodlist ()
+        {
+            return View();
         }
     }
 }

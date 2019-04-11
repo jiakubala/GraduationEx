@@ -1,10 +1,10 @@
 ﻿
 @{
-    ViewData["Title"] = "Loginin";
+    ViewData["Title"] = "登录";
 }
 @model Graduation.Models.User
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
         <title>用户登录</title>
@@ -23,29 +23,26 @@
                 </div>
                 <div class="form-bd">
                     <form asp-action="Loginjudge" method="POST">
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <dl>
                             <dt>用户名</dt>
                             <dd>
                                 <input type="text" class="text" asp-for="UserId" placeholder="请输入用户名" autofocus />
-                                <span asp-validation-for="UserId" class="text-danger"></span>
                             </dd>
                         </dl>
                         <dl>
                             <dt>密&nbsp;&nbsp;&nbsp;&nbsp;码</dt>
                             <dd>
                                 <input type="password" class="text" asp-for="Password" placeholder="请输入密码" />
-                                <span asp-validation-for="Password" class="text-danger"></span>
                             </dd>
                         </dl>
                         <dl>
                             <dt>&nbsp;</dt>
-                            <dd><input type="submit"class="submit" /> <a href="" class="forget">忘记密码?</a></dd>
+                            <dd><input type="submit" class="submit" /> <a href="" class="forget">忘记密码?</a></dd>
                         </dl>
                     </form>
                     <dl>
                         <dt>&nbsp;</dt>
-                        <dd> 还不是本站会员？立即 <a href="" class="register">注册</a></dd>
+                        <dd> 还不是本站会员？立即 <a method="get" asp-action="Register" class="register">注册</a></dd>
                     </dl>
                     <dl class="other">
                         <dt>&nbsp;</dt>

@@ -62,13 +62,23 @@ namespace Graduation.Controllers
                 HttpContext.Session.SetInt32("UserId", a.UserId);
                 ViewData["UserName"] = a.Name;
                 log.InfoFormat("登陆验证成功" + (a != null ? Helper.JsonHelper.ToJson(a) : ""));
-                return RedirectToAction("Index", "User");
+                return RedirectToAction("Goodlist", "Index");
             }
             catch (Exception e)
             {
                 log.Error("登陆验证失败,错误提示: " + Helper.JsonHelper.ToJson(e));
                 return View("Error", e);
             }
+        }
+
+        /// <summary>
+        /// 注册页面
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
         }
 
         /// <summary>

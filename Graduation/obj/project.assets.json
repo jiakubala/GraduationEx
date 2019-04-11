@@ -13145,11 +13145,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\.net core\\Graduation\\Graduation\\GraduationEx\\Graduation\\Graduation.csproj",
+      "projectUniqueName": "G:\\.net core\\Graduation\\GraduationEx\\Graduation\\Graduation.csproj",
       "projectName": "Graduation",
-      "projectPath": "G:\\.net core\\Graduation\\Graduation\\GraduationEx\\Graduation\\Graduation.csproj",
+      "projectPath": "G:\\.net core\\Graduation\\GraduationEx\\Graduation\\Graduation.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "G:\\.net core\\Graduation\\Graduation\\GraduationEx\\Graduation\\obj\\",
+      "outputPath": "G:\\.net core\\Graduation\\GraduationEx\\Graduation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

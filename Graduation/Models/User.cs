@@ -12,13 +12,13 @@ namespace Graduation.Models
     public class User
     {
         [Key]
+        [Required]
         public int UserId { get; set; }
 
         public string TrueName { get; set; }
 
         public string Email { get; set; }
 
-        [Required]
         public int Phone { get; set; }
 
         [Required]
