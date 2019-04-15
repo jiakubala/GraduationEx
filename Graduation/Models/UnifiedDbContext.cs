@@ -13,6 +13,8 @@ namespace Graduation.Models
         public UnifiedDbContext(DbContextOptions<UnifiedDbContext> options) : base(options) { }
 
         public DbSet<User> User { get; set; }
+        public DbSet<Order> Order { get; set; }
+        public DbSet<Good> Good { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -78,6 +80,10 @@ namespace Graduation.Models
                 a.Property(e => e.Details)
                 .HasColumnName("details")
                 .HasColumnType("varchar(255)");
+
+                a.Property(e => e.Type)
+                .HasColumnName("type")
+                .HasColumnType("varchar(50)");
             });
 
             builder.Entity<Order>(a =>
@@ -98,7 +104,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.OrderState)
                 .HasColumnName("orderstate")
-                .HasColumnType("tinyint(4)");
+                .HasColumnType("int(4)");
 
                 a.Property(e => e.GoodNumber)
                 .HasColumnName("goodnumber")

@@ -8,24 +8,24 @@ using System.Threading.Tasks;
 namespace Graduation.Stores
 {
     /// <summary>
-    /// 首页数据层
+    /// 订单数据层
     /// </summary>
     /// <typeparam name="TContext"></typeparam>
-    public class IndexStore<TContext> : IIndexStore where TContext : UnifiedDbContext
+    public class OrderStore<TContext> : IOrderStore where TContext : UnifiedDbContext
     {
-        public IndexStore(TContext context)
+        public OrderStore(TContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
         protected virtual TContext _context { get; }
 
         /// <summary>
-        /// 获取商品列表
+        /// 获取订单列表
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query)
+        public Task<List<TResult>> GetOrderAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -33,7 +33,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Good.AsNoTracking()).ToListAsync();
+                return query.Invoke(_context.Order.AsNoTracking()).ToListAsync();
             }
             catch (Exception e)
             {

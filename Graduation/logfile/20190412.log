@@ -1,0 +1,39 @@
+﻿2019-04-12 09:43:18,888 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 09:43:22,407 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 09:43:23,928 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-12 09:43:24,238 [4] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-12 15:08:42,707 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 15:09:13,946 [8] INFO  Graduation.Controllers.IndexController [(null)] -  || Get into 商品列表
+2019-04-12 15:27:19,579 [7] INFO  Graduation.Controllers.IndexController [(null)] -  || Get into 商品列表
+2019-04-12 15:27:24,488 [7] INFO  Graduation.Controllers.IndexController [(null)] -  || Get into 商品列表
+2019-04-12 15:27:30,655 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 15:27:33,282 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 15:27:35,128 [3] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-12 15:27:35,437 [3] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-12 15:29:05,552 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 15:29:08,170 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-04-12 15:29:08,901 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "",
+  "phone": 0,
+  "password": "211",
+  "name": "zzz",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-04-12 15:29:08,981 [4] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-12 15:29:10,265 [7] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表
+2019-04-12 15:29:10,285 [7] INFO  Graduation.Controllers.IndexController [(null)] - zzz || Get into 商品列表

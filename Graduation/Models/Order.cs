@@ -24,7 +24,7 @@ namespace Graduation.Models
         public int GoodNumber { get; set; }
 
         [Required]
-        public OrgStatus OrderState { get; set; }
+        public int OrderState { get; set; }
 
         public enum OrgStatus
         {

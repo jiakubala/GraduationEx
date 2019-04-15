@@ -8,25 +8,26 @@ using System.Threading.Tasks;
 namespace Graduation.Managers
 {
     /// <summary>
-    /// 首页逻辑层
+    /// 订单逻辑层
     /// </summary>
-    public class IndexManager
+    public class OrderManager
     {
-        protected IIndexStore _indexStore { get; }
-        public IndexManager(IIndexStore indexStore)
+        protected IOrderStore _orderStore { get; }
+        public OrderManager(IOrderStore orderStore)
         {
-            _indexStore = indexStore;
+            _orderStore = orderStore;
         }
 
         /// <summary>
-        /// 获取商品列表
+        /// 获取用户订单列表
         /// </summary>
+        /// <param name="userid"></param>
         /// <returns></returns>
-        public async Task<List<Good>> GetGoodsAsync()
+        public async Task<List<Order>> GetOrdersAsync(int userid)
         {
             try
             {
-                return await _indexStore.GetGoodAsync(a => a.Where(b => b.Stock != 0));
+                return await _orderStore.GetOrderAsync(a => a.Where(b => b.UserId == userid));
             }
             catch (Exception e)
             {
@@ -35,14 +36,15 @@ namespace Graduation.Managers
         }
 
         /// <summary>
-        /// 获取商品列表（分类分支）
+        /// 获取用户已购商品列表
         /// </summary>
+        /// <param name="userid"></param>
         /// <returns></returns>
-        public async Task<List<Good>> GetGoodstypeAsync(string typename)
+        public async Task<List<Order>> GetOrderbuysAsync(int userid)
         {
             try
             {
-                return await _indexStore.GetGoodAsync(a => a.Where(b => b.Type == typename));
+                return await _orderStore.GetOrderAsync(a => a.Where(b => b.UserId == userid && b.OrderState == 2));
             }
             catch (Exception e)
             {

@@ -33,8 +33,16 @@ namespace Graduation.Controllers
         [HttpGet]
         public IActionResult Loginin()
         {
-            log.InfoFormat(" || Get into 登陆验证");
-            return View();
+            log.InfoFormat(" || Get into 登陆页面");
+            try
+            {
+                return View();
+            }
+            catch (Exception e)
+            {
+                log.Error("登陆页面跳转失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
         }
 
         /// <summary>
@@ -48,7 +56,7 @@ namespace Graduation.Controllers
             log.InfoFormat(" || Get into 登陆验证");
             if (!ModelState.IsValid)
             {
-                log.Warn("登录验证模型验证失败");
+                log.Warn("登陆验证模型验证失败");
             }
             try
             {
@@ -80,8 +88,16 @@ namespace Graduation.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-            log.InfoFormat(" || Get into 登陆验证");
-            return View();
+            log.InfoFormat(" || Get into 注册页面");
+            try
+            {
+                return View();
+            }
+            catch (Exception e)
+            {
+                log.Error("注册页面跳转失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
         }
 
         /// <summary>
@@ -125,11 +141,11 @@ namespace Graduation.Controllers
             {
                 HttpContext.Session.Remove("UserName");
                 log.InfoFormat("登录注销成功");
-                return View();
+                return RedirectToAction("Loginin");
             }
             catch (Exception e)
             {
-                log.Error("登陆验证失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                log.Error("注销登陆失败,错误提示: " + Helper.JsonHelper.ToJson(e));
                 return View("Error", e);
             }
         }

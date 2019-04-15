@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 namespace Graduation.Stores
 {
     /// <summary>
-    /// 首页接口层
+    /// 订单接口层
     /// </summary>
-    public interface IIndexStore
+    public interface IOrderStore
     {
         /// <summary>
-        /// 获取商品列表
+        /// 获取订单列表
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query);
+        Task<List<TResult>> GetOrderAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query);
     }
 }

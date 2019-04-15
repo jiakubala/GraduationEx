@@ -27,5 +27,8 @@ namespace Graduation.Models
         public int Sold { get; set; }
 
         public string Details { get; set; }
+
+        [Required]
+        public string Type { get; set; }
     }
 }

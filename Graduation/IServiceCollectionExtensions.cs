@@ -21,8 +21,10 @@ namespace Microsoft.Extensions.DependencyInjection
 
             services.AddScoped<ILoginStore, LoginStore<UnifiedDbContext>>();
             services.AddScoped<IIndexStore, IndexStore<UnifiedDbContext>>();
+            services.AddScoped<IOrderStore, OrderStore<UnifiedDbContext>>();
             services.AddScoped<LoginManager>();
             services.AddScoped<IndexManager>();
+            services.AddScoped<OrderManager>();
 
             return new UserDefinedBuilder(services);
         }
