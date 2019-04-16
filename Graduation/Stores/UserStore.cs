@@ -1,4 +1,5 @@
 ﻿using Graduation.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,87 @@ namespace Graduation.Stores
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
         protected virtual TContext _context { get; }
+
+        /// <summary>
+        /// 修改个人资料
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public async Task<User> Userupdate(User user)
+        {
+            try
+            {
+                _context.User.Update(user);
+                await _context.SaveChangesAsync();
+                return await _context.User.Where(a => a.UserId == user.UserId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 获取User实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<TResult> GetuserAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.User.AsNoTracking()).SingleOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 查询Address列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<List<TResult>> GetAddressAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.Address.AsNoTracking()).ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 修改收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        public async Task<Address> Addressupdate(Address add)
+        {
+            try
+            {
+                _context.Address.Update(add);
+                await _context.SaveChangesAsync();
+                return await _context.Address.Where(a => a.KeyId == add.KeyId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

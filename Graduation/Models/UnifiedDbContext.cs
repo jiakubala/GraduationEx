@@ -15,6 +15,7 @@ namespace Graduation.Models
         public DbSet<User> User { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<Good> Good { get; set; }
+        public DbSet<Address> Address { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -84,6 +85,10 @@ namespace Graduation.Models
                 a.Property(e => e.Type)
                 .HasColumnName("type")
                 .HasColumnType("varchar(50)");
+
+                a.Property(e => e.Faid)
+                .HasColumnName("faid")
+                .HasColumnType("int(11)");
             });
 
             builder.Entity<Order>(a =>
@@ -111,6 +116,38 @@ namespace Graduation.Models
                 .HasColumnType("int(11)");
             });
 
+            builder.Entity<Address>(a =>
+            {
+                a.ToTable("address");
+
+                a.Property(e => e.KeyId)
+                .HasColumnName("keyid")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.Name)
+                .HasColumnName("name")
+                .HasColumnType("varchar(11)");
+
+                a.Property(e => e.Local)
+                .HasColumnName("local")
+                .HasColumnType("varchar(50)");
+
+                a.Property(e => e.Addres)
+                .HasColumnName("addres")
+                .HasColumnType("varchar(50)");
+
+                a.Property(e => e.ZipCode)
+                .HasColumnName("zipcode")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.Phone)
+                .HasColumnName("phone")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.UserId)
+                .HasColumnName("userid")
+                .HasColumnType("int(11)");
+            });
         }
     }
 }

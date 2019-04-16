@@ -48,7 +48,7 @@ namespace Graduation.Controllers
         }
 
         /// <summary>
-        /// 我的已购商品
+        /// 我的已购商品（个人主页）
         /// </summary>
         /// <returns></returns>
         [HttpGet]

@@ -71,3 +71,4 @@ G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Vi
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Index\Goodlist.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Order\Orderlist.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Order\Orderbuylist.g.cshtml.cs
+G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\User\Userupdate.g.cshtml.cs
