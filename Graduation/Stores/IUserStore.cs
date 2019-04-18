@@ -27,6 +27,14 @@ namespace Graduation.Stores
         Task<TResult> GetuserAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query);
 
         /// <summary>
+        /// 查询Address
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<TResult> GetAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query);
+
+        /// <summary>
         /// 查询Address列表
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
@@ -40,5 +48,19 @@ namespace Graduation.Stores
         /// <param name="add"></param>
         /// <returns></returns>
         Task<Address> Addressupdate(Address add);
+
+        /// <summary>
+        /// 新增收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        Task<Address> Addressadd(Address add);
+
+        /// <summary>
+        /// 删除收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        Task Addressdelete(Address add);
     }
 }

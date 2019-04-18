@@ -61,6 +61,28 @@ namespace Graduation.Stores
         }
 
         /// <summary>
+        /// 查询Address实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<TResult> GetAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.Address.AsNoTracking()).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
         /// 查询Address列表
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
@@ -94,6 +116,44 @@ namespace Graduation.Stores
                 _context.Address.Update(add);
                 await _context.SaveChangesAsync();
                 return await _context.Address.Where(a => a.KeyId == add.KeyId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        /// <summary>
+        /// 新增收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        public async Task<Address> Addressadd(Address add)
+        {
+            try
+            {
+                await _context.Address.AddAsync(add);
+                await _context.SaveChangesAsync();
+                return await _context.Address.Where(a => a.KeyId == add.KeyId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        public async Task Addressdelete(Address add)
+        {
+            try
+            {
+                _context.Address.Remove(add);
+                await _context.SaveChangesAsync();
             }
             catch (Exception e)
             {

@@ -26,6 +26,8 @@ namespace Graduation.Models
         [Required]
         public int OrderState { get; set; }
 
+        public string Evaluate { get; set; }
+
         public enum OrgStatus
         {
             /// <summary>

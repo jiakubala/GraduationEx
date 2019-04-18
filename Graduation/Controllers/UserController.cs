@@ -121,6 +121,27 @@ namespace Graduation.Controllers
         }
 
         /// <summary>
+        /// 跳转编辑收货地址页面
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public IActionResult UpdateAddress()
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 跳转编辑收货地址页面");
+            try
+            {
+                return View();
+            }
+            catch (Exception e)
+            {
+                log.Error("跳转编辑收货地址页面,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
         /// 编辑收货地址
         /// </summary>
         /// <param name="add"></param>
@@ -140,6 +161,54 @@ namespace Graduation.Controllers
             catch (Exception e)
             {
                 log.Error("编辑收货地址失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
+        /// 新增收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> AddAddress(Address add)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 新增收货地址");
+            try
+            {
+                var list = await _userManager.AddAddressesAsync(add);
+                log.InfoFormat("新增收货地址成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                return RedirectToAction("Address",add.UserId);
+            }
+            catch (Exception e)
+            {
+                log.Error("新增收货地址失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
+        /// 删除收货地址
+        /// </summary>
+        /// <param name="keyid"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> DeleteAddress(Address add)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 删除收货地址");
+            try
+            {
+                await _userManager.DeleteAddressesAsync(add.KeyId);
+                log.InfoFormat("删除收货地址成功");
+                return RedirectToAction("Address", add.UserId);
+            }
+            catch (Exception e)
+            {
+                log.Error("删除收货地址失败,错误提示: " + Helper.JsonHelper.ToJson(e));
                 return View("Error", e);
             }
         }

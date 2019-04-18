@@ -114,6 +114,10 @@ namespace Graduation.Models
                 a.Property(e => e.GoodNumber)
                 .HasColumnName("goodnumber")
                 .HasColumnType("int(11)");
+
+                a.Property(e => e.Evaluate)
+                .HasColumnName("evaluate")
+                .HasColumnType("varchar(50)");
             });
 
             builder.Entity<Address>(a =>

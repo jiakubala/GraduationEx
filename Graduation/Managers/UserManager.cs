@@ -31,6 +31,7 @@ namespace Graduation.Managers
             {
                 if (user.Password != null)
                 {
+                    //修改密码
                     return await _userStore.Userupdate(new User
                     {
                         Password = user.Password
@@ -38,8 +39,10 @@ namespace Graduation.Managers
                 }
                 if (user.Name == null)
                 {
+                    //显示个人资料
                     return await _userStore.GetuserAsync(a => a.Where(b => b.UserId == user.UserId));
                 }
+                //修改个人资料
                 return await _userStore.Userupdate(new User
                 {
                     Name = user.Name,
@@ -112,5 +115,48 @@ namespace Graduation.Managers
                 throw e;
             }
         }
+
+        /// <summary>
+        /// 新增收货地址
+        /// </summary>
+        /// <param name="add"></param>
+        /// <returns></returns>
+        public async Task<Address> AddAddressesAsync(Address add)
+        {
+            try
+            {
+                return await _userStore.Addressadd(new Address
+                {
+                    Name = add.Name,
+                    Local = add.Local,
+                    Addres = add.Addres,
+                    ZipCode = add.ZipCode,
+                    Phone = add.Phone,
+                });
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除收货地址
+        /// </summary>
+        /// <param name="keyid"></param>
+        /// <returns></returns>
+        public async Task DeleteAddressesAsync(int keyid)
+        {
+            try
+            {
+                var address = await _userStore.GetAsync(a => a.Where(b => b.KeyId == keyid));
+                await _userStore.Addressdelete(address);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

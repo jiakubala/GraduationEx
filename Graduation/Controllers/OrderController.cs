@@ -48,6 +48,31 @@ namespace Graduation.Controllers
         }
 
         /// <summary>
+        /// 订单评价
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Evaluatelist(int userid)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 订单评价");
+            try
+            {
+                var list = await _orderManager.GetevaluateAsync(userid);
+                log.InfoFormat("获取订单评价成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                ViewData["UserName"] = userName;
+                return View(list);
+            }
+            catch (Exception e)
+            {
+                log.Error("订单评价获取失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
         /// 我的已购商品（个人主页）
         /// </summary>
         /// <returns></returns>

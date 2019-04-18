@@ -36,6 +36,23 @@ namespace Graduation.Managers
         }
 
         /// <summary>
+        /// 获取订单评价
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        public async Task<List<Order>> GetevaluateAsync(int userid)
+        {
+            try
+            {
+                return await _orderStore.GetOrderAsync(a => a.Where(b => b.UserId == userid && b.OrderState == 4 && b.Evaluate != null));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
         /// 获取用户已购商品列表
         /// </summary>
         /// <param name="userid"></param>
