@@ -32,5 +32,6 @@ namespace Graduation.Models
         public string Type { get; set; }
 
         public int Faid { get; set; }
+
     }
 }

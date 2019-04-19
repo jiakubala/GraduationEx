@@ -118,6 +118,10 @@ namespace Graduation.Models
                 a.Property(e => e.Evaluate)
                 .HasColumnName("evaluate")
                 .HasColumnType("varchar(50)");
+
+                a.Property(e => e.Name)
+                .HasColumnName("name")
+                .HasColumnType("varchar(50)");
             });
 
             builder.Entity<Address>(a =>

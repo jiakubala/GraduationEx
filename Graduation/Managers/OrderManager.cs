@@ -1,4 +1,5 @@
-﻿using Graduation.Models;
+﻿using Graduation.Dto.Request;
+using Graduation.Models;
 using Graduation.Stores;
 using System;
 using System.Collections.Generic;
@@ -62,6 +63,86 @@ namespace Graduation.Managers
             try
             {
                 return await _orderStore.GetOrderAsync(a => a.Where(b => b.UserId == userid && b.OrderState == 2));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 购物车列表
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        public async Task<List<Order>> GetShopcarAsync(int userid)
+        {
+            try
+            {
+                return await _orderStore.GetOrderAsync(a => a.Where(b => b.UserId == userid && b.OrderState == 1));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除订单（删除购物车里商品）
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        public async Task DeleteOrderAsync(int orderid)
+        {
+            try
+            {
+                var order = await _orderStore.GetAsync(a => a.Where(b => b.OrderId == orderid));
+                await _orderStore.Orderdelete(order);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 新增订单（添加商品到购物车）
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        public async Task<Order> AddOrderAsync(GoodRequest good)
+        {
+            try
+            {
+                var order = await _orderStore.AddOrder(new Order
+                {
+                    GoodId = good.GoodId,
+                    OrderId = good.OrderId,
+                    UserId = good.UserId,
+                    GoodNumber = good.GoodNumber,
+                    Name = good.Name,
+                    OrderState = 1
+                });
+                return await _orderStore.AddOrder(order);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 修改订单状态
+        /// </summary>
+        /// <param name="state"></param>
+        /// <returns></returns>
+        public async Task<Order> UpdatestateAsync(StateRequest state)
+        {
+            try
+            {
+                var order = await _orderStore.GetAsync(a => a.Where(b => b.OrderId == state.OrderId));
+                order.OrderState = state.OrderState;
+                return await _orderStore.UpdateOrder(order);
             }
             catch (Exception e)
             {

@@ -40,5 +40,83 @@ namespace Graduation.Stores
                 throw e;
             }
         }
+
+        /// <summary>
+        /// 获取订单实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<TResult> GetAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.Order.AsNoTracking()).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除订单
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
+        public async Task Orderdelete(Order order)
+        {
+            try
+            {
+                _context.Order.Remove(order);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 新增订单
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
+        public async Task<Order> AddOrder(Order order)
+        {
+            try
+            {
+                await _context.Order.AddAsync(order);
+                await _context.SaveChangesAsync();
+                return await _context.Order.Where(a => a.OrderId == order.OrderId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 修改订单
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
+        public async Task<Order> UpdateOrder(Order order)
+        {
+            try
+            {
+                _context.Order.Update(order);
+                await _context.SaveChangesAsync();
+                return await _context.Order.Where(a => a.OrderId == order.OrderId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

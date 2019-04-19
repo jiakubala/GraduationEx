@@ -14,7 +14,6 @@
 
   <ItemGroup>
     <Folder Include="Dto\Common\" />
-    <Folder Include="Dto\Request\" />
     <Folder Include="Dto\Response\" />
   </ItemGroup>
 
