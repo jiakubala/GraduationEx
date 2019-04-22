@@ -37,6 +37,23 @@ namespace Graduation.Managers
         }
 
         /// <summary>
+        /// 获取订单实体
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        public async Task<Order> GetAsync(int orderid)
+        {
+            try
+            {
+                return await _orderStore.GetAsync(a => a.Where(b => b.OrderId == orderid));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
         /// 获取订单评价
         /// </summary>
         /// <param name="userid"></param>
@@ -142,6 +159,25 @@ namespace Graduation.Managers
             {
                 var order = await _orderStore.GetAsync(a => a.Where(b => b.OrderId == state.OrderId));
                 order.OrderState = state.OrderState;
+                return await _orderStore.UpdateOrder(order);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除订单评价
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        public async Task<Order> DeleteevaluateAsync(int orderid)
+        {
+            try
+            {
+                var order = await _orderStore.GetAsync(a => a.Where(b => b.OrderId == orderid));
+                order.Evaluate = null;
                 return await _orderStore.UpdateOrder(order);
             }
             catch (Exception e)

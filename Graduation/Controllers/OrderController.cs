@@ -75,6 +75,31 @@ namespace Graduation.Controllers
         }
 
         /// <summary>
+        /// 删除订单评价
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Deleteevaluate(int orderid,int userid)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 删除评价");
+            try
+            {
+                var order = await _orderManager.DeleteevaluateAsync(orderid);
+                log.InfoFormat("删除评价成功" + (order != null ? Helper.JsonHelper.ToJson(order) : ""));
+                ViewData["UserName"] = userName;
+                return RedirectToAction("Evaluatelist", userid);
+            }
+            catch (Exception e)
+            {
+                log.Error("删除评价失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
         /// 我的已购商品（个人主页）
         /// </summary>
         /// <param name="userid"></param>
@@ -181,7 +206,7 @@ namespace Graduation.Controllers
         /// <returns></returns>
         [HttpPost]
         [TypeFilter(typeof(SessionFilter))]
-        public async Task<IActionResult> AddShopcar(StateRequest state)
+        public async Task<IActionResult> UpadateOrderState(StateRequest state)
         {
             string userName = HttpContext.Session.GetString("UserName");
             log.InfoFormat(userName + " || Get into 修改订单状态");
@@ -198,5 +223,61 @@ namespace Graduation.Controllers
                 return View("Error", e);
             }
         }
+
+        /// <summary>
+        /// 支付页面
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Payment(int orderid)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 转到支付页面");
+            try
+            {
+                var order = await _orderManager.GetAsync(orderid);
+                log.InfoFormat("转到支付页面成功" + (order != null ? Helper.JsonHelper.ToJson(order) : ""));
+                ViewData["UserName"] = userName;
+                return View();
+            }
+            catch (Exception e)
+            {
+                log.Error("转到支付页面失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
+        /// 完成支付
+        /// </summary>
+        /// <param name="orderid"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Paymentinfo(int orderid)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 支付完成");
+            try
+            {
+                StateRequest state = new StateRequest
+                {
+                    OrderId = orderid,
+                    OrderState = 2
+                };
+                var order = await _orderManager.UpdatestateAsync(state);
+                log.InfoFormat("支付成功" + (order != null ? Helper.JsonHelper.ToJson(order) : ""));
+                ViewData["UserName"] = userName;
+                return View();
+            }
+            catch (Exception e)
+            {
+                log.Error("支付失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
     }
 }

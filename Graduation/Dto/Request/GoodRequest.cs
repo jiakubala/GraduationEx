@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 
 namespace Graduation.Dto.Request
 {
+    /// <summary>
+    /// 购物车请求体
+    /// </summary>
     public class GoodRequest
     {
         public int OrderId { get; set; }

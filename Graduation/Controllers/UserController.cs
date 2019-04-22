@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Graduation.Dto.Request;
 using Graduation.Filter;
 using Graduation.Managers;
 using Graduation.Models;
@@ -68,6 +69,30 @@ namespace Graduation.Controllers
             catch (Exception e)
             {
                 log.Error("获取我的收藏失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
+        /// 添加/删除收藏
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Userfavorite(FavoriteRequest fr)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 编辑收藏");
+            try
+            {
+                var good = await _userManager.Updatefavorite(fr);
+                log.InfoFormat("编辑收藏成功" + (good != null ? Helper.JsonHelper.ToJson(good) : ""));
+                return View(good);
+            }
+            catch (Exception e)
+            {
+                log.Error("编辑收藏失败,错误提示: " + Helper.JsonHelper.ToJson(e));
                 return View("Error", e);
             }
         }

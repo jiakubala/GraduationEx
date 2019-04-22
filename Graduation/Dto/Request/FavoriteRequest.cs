@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 namespace Graduation.Dto.Request
 {
     /// <summary>
-    /// 修改状态请求体
+    /// 收藏请求体
     /// </summary>
-    public class StateRequest
+    public class FavoriteRequest
     {
-        public int OrderId { get; set; }
-
-        public int OrderState { get; set; }
+        public int UserId { get; set; }
+        public int GoodId { get; set; }
     }
 }

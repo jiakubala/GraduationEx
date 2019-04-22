@@ -19,6 +19,23 @@ namespace Graduation.Managers
         }
 
         /// <summary>
+        /// 获取商品实体
+        /// </summary>
+        /// <param name="goodid"></param>
+        /// <returns></returns>
+        public async Task<Good> GetAsync(int goodid)
+        {
+            try
+            {
+                return await _indexStore.GetAsync(a => a.Where(b => b.GoodId == goodid));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
         /// 获取商品列表
         /// </summary>
         /// <returns></returns>

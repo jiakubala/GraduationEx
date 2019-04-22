@@ -66,7 +66,6 @@ G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduati
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.csproj.CopyComplete
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Shared\_ViewStart.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Login\Register.g.cshtml.cs
-G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Graduation.csprojAssemblyReference.cache
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Index\Goodlistbranch.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Index\Goodlist.g.cshtml.cs
 G:\.net core\Graduation\GraduationEx\Graduation\obj\Debug\netcoreapp2.1\Razor\Views\Order\Orderlist.g.cshtml.cs

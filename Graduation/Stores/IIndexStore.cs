@@ -18,5 +18,20 @@ namespace Graduation.Stores
         /// <param name="query"></param>
         /// <returns></returns>
         Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query);
+
+        /// <summary>
+        /// 获取商品实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<TResult> GetAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query);
+
+        /// <summary>
+        /// 修改商品实体
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        Task<Good> UpdateGood(Good good);
     }
 }

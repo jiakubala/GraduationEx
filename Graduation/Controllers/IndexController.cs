@@ -71,5 +71,29 @@ namespace Graduation.Controllers
             }
         }
 
+        /// <summary>
+        /// 商品详情
+        /// </summary>
+        /// <param name="typename"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Goodlistbranch(int goodid)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 商品详情");
+            try
+            {
+                var good = await _indexManager.GetAsync(goodid);
+                log.InfoFormat("获取商品详情成功" + (good != null ? Helper.JsonHelper.ToJson(good) : ""));
+                ViewData["UserName"] = userName;
+                return View(good);
+            }
+            catch (Exception e)
+            {
+                log.Error("商品详情获取失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Graduation.Models;
+﻿using Graduation.Dto.Request;
+using Graduation.Models;
 using Graduation.Stores;
 using System;
 using System.Collections.Generic;
@@ -68,6 +69,29 @@ namespace Graduation.Managers
             try
             {
                 return await _indexStore.GetGoodAsync(a => a.Where(b => b.Faid == userid));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 添加/删除收藏
+        /// </summary>
+        /// <param name="fr"></param>
+        /// <returns></returns>
+        public async Task<Good> Updatefavorite(FavoriteRequest fr)
+        {
+            try
+            {
+                var fa = await _indexStore.GetAsync(a => a.Where(b => b.GoodId == fr.GoodId));
+                if (fa.Faid == null)
+                {
+                    fa.Faid = fr.UserId;
+                }
+                fa.Faid = null;
+                return await _indexStore.UpdateGood(fa);
             }
             catch (Exception e)
             {
