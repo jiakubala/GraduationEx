@@ -81,5 +81,86 @@ namespace Graduation.Stores
                 throw e;
             }
         }
+
+        /// <summary>
+        /// 获取收藏商品列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<List<TResult>> GetFavoritelistAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.Favorite.AsNoTracking()).ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 获取收藏商品
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public Task<TResult> GetFavoriteAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return query.Invoke(_context.Favorite.AsNoTracking()).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 添加收藏商品
+        /// </summary>
+        /// <param name="fdd"></param>
+        /// <returns></returns>
+        public async Task<Favorite> Favoriteadd(Favorite fdd)
+        {
+            try
+            {
+                await _context.Favorite.AddAsync(fdd);
+                await _context.SaveChangesAsync();
+                return await _context.Favorite.Where(a => a.KeyId == fdd.KeyId).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除收藏商品
+        /// </summary>
+        /// <param name="fdd"></param>
+        /// <returns></returns>
+        public async Task Favoritedelete(Favorite fdd)
+        {
+            try
+            {
+                _context.Favorite.Remove(fdd);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }

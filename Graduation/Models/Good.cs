@@ -31,7 +31,14 @@ namespace Graduation.Models
         [Required]
         public string Type { get; set; }
 
-        public int? Faid { get; set; }
+        /// <summary>
+        /// 收藏数量
+        /// </summary>
+        public int Facount { get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public DateTime Createtime { get; set; }
     }
 }

@@ -68,7 +68,14 @@ namespace Graduation.Managers
         {
             try
             {
-                return await _indexStore.GetGoodAsync(a => a.Where(b => b.Faid == userid));
+                //获取收藏商品Id
+                var fagoods = await _indexStore.GetFavoritelistAsync(a => a.Where(b => b.UserId == userid));
+                List<int> goodids = new List<int>();
+                foreach(var fagood in fagoods)
+                {
+                    goodids.Add(fagood.GoodId);
+                }
+                return await _indexStore.GetGoodAsync(a => a.Where(b => goodids.Contains(b.GoodId)));
             }
             catch (Exception e)
             {
@@ -85,13 +92,25 @@ namespace Graduation.Managers
         {
             try
             {
-                var fa = await _indexStore.GetAsync(a => a.Where(b => b.GoodId == fr.GoodId));
-                if (fa.Faid == null)
+                //获取商品
+                var Go = await _indexStore.GetAsync(a => a.Where(b => b.GoodId == fr.GoodId));
+                //获取该商品的用户收藏
+                var fa = await _indexStore.GetFavoriteAsync(a => a.Where(b => b.GoodId == fr.GoodId && b.UserId == fr.UserId));
+                if (fa == null)
                 {
-                    fa.Faid = fr.UserId;
+                    await _indexStore.Favoriteadd(new Favorite
+                    {
+                        GoodId = fr.GoodId,
+                        UserId = fr.UserId
+                    });   
+                    //增加收藏数量
+                    Go.Facount += 1;
+                    return await _indexStore.UpdateGood(Go);
                 }
-                fa.Faid = null;
-                return await _indexStore.UpdateGood(fa);
+                await _indexStore.Favoritedelete(fa);
+                //减少收藏数量
+                Go.Facount -= 1;
+                return await _indexStore.UpdateGood(Go);
             }
             catch (Exception e)
             {

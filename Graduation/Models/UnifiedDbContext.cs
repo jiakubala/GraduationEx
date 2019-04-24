@@ -16,6 +16,7 @@ namespace Graduation.Models
         public DbSet<Order> Order { get; set; }
         public DbSet<Good> Good { get; set; }
         public DbSet<Address> Address { get; set; }
+        public DbSet<Favorite> Favorite { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -86,9 +87,13 @@ namespace Graduation.Models
                 .HasColumnName("type")
                 .HasColumnType("varchar(50)");
 
-                a.Property(e => e.Faid)
-                .HasColumnName("faid")
+                a.Property(e => e.Facount)
+                .HasColumnName("facount")
                 .HasColumnType("int(11)");
+
+                a.Property(e => e.Createtime)
+                .HasColumnName("createtime")
+                .HasColumnType("datetime(6)");
             });
 
             builder.Entity<Order>(a =>
@@ -154,6 +159,23 @@ namespace Graduation.Models
 
                 a.Property(e => e.UserId)
                 .HasColumnName("userid")
+                .HasColumnType("int(11)");
+            });
+
+            builder.Entity<Favorite>(a =>
+            {
+                a.ToTable("favorite");
+
+                a.Property(e => e.KeyId)
+                .HasColumnName("keyid")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.UserId)
+                .HasColumnName("userid")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.GoodId)
+                .HasColumnName("goodid")
                 .HasColumnType("int(11)");
             });
         }

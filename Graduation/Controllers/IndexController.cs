@@ -1,4 +1,5 @@
-﻿using Graduation.Filter;
+﻿using Graduation.Dto.Request;
+using Graduation.Filter;
 using Graduation.Managers;
 using log4net;
 using Microsoft.AspNetCore.Http;
@@ -23,22 +24,24 @@ namespace Graduation.Controllers
             _indexManager = indexManager;
         }
 
+
         /// <summary>
         /// 商品列表（首页）
         /// </summary>
+        /// <param name="code">1:特别推荐 2:新品上架 3:热门商品</param>
         /// <returns></returns>
         [HttpGet]
         [TypeFilter(typeof(SessionFilter))]
-        public async Task<IActionResult> Goodlist()
+        public async Task<IActionResult> Goodlist(int code)
         {
             string userName = HttpContext.Session.GetString("UserName");
             log.InfoFormat(userName + " || Get into 首页");
             try
             {
-                var list = await _indexManager.GetGoodsAsync();
-                log.InfoFormat("获取商品列表成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
-                ViewData["UserName"] = userName;
-                return View(list);
+                //var list = await _indexManager.GetGoodsAsync(code);
+                //log.InfoFormat("获取商品列表成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                //ViewData["UserName"] = userName;
+                return View();
             }
             catch (Exception e)
             {
@@ -48,18 +51,18 @@ namespace Graduation.Controllers
         }
 
         /// <summary>
-        /// 商品列表（分类分支）
+        /// 商品列表（分类分支，搜索）
         /// </summary>
         /// <returns></returns>
         [HttpGet]
         [TypeFilter(typeof(SessionFilter))]
-        public async Task<IActionResult> Goodlistbranch(string typename)
+        public async Task<IActionResult> Goodlistbranch(GoodlistRequest condition)
         {
             string userName = HttpContext.Session.GetString("UserName");
             log.InfoFormat(userName + " || Get into 商品列表");
             try
             {
-                var list = await _indexManager.GetGoodstypeAsync(typename);
+                var list = await _indexManager.GetGoodstypeAsync(condition);
                 log.InfoFormat("获取分类商品列表成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
                 ViewData["UserName"] = userName;
                 return View(list);
@@ -67,6 +70,31 @@ namespace Graduation.Controllers
             catch (Exception e)
             {
                 log.Error("商品列表获取失败,错误提示: " + Helper.JsonHelper.ToJson(e));
+                return View("Error", e);
+            }
+        }
+
+        /// <summary>
+        /// 分类商品列表排序
+        /// </summary>
+        /// <param name="condition"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [TypeFilter(typeof(SessionFilter))]
+        public async Task<IActionResult> Goodlistbranchinfo(GoodlistinfoRequest condition)
+        {
+            string userName = HttpContext.Session.GetString("UserName");
+            log.InfoFormat(userName + " || Get into 分类商品列表排序");
+            try
+            {
+                var list = await _indexManager.OrderGoodstypeAsync(condition);
+                log.InfoFormat("获取分类商品列表排序成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                ViewData["UserName"] = userName;
+                return View(list);
+            }
+            catch (Exception e)
+            {
+                log.Error("分类商品列表排序获取失败,错误提示: " + Helper.JsonHelper.ToJson(e));
                 return View("Error", e);
             }
         }

@@ -33,5 +33,35 @@ namespace Graduation.Stores
         /// <param name="good"></param>
         /// <returns></returns>
         Task<Good> UpdateGood(Good good);
+
+        /// <summary>
+        /// 获取收藏商品列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<List<TResult>> GetFavoritelistAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query);
+
+        /// <summary>
+        /// 获取收藏商品
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<TResult> GetFavoriteAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query);
+
+        /// <summary>
+        /// 添加收藏商品
+        /// </summary>
+        /// <param name="fdd"></param>
+        /// <returns></returns>
+        Task<Favorite> Favoriteadd(Favorite fdd);
+
+        /// <summary>
+        /// 删除收藏商品
+        /// </summary>
+        /// <param name="fdd"></param>
+        /// <returns></returns>
+        Task Favoritedelete(Favorite fdd);
     }
 }
