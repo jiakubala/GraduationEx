@@ -20,6 +20,14 @@ namespace Graduation.Stores
         Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query);
 
         /// <summary>
+        /// 获取类型列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<List<Models.Type>> GetTypelistAsync();
+
+        /// <summary>
         /// 获取商品实体
         /// </summary>
         /// <typeparam name="TResult"></typeparam>

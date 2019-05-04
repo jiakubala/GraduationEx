@@ -1,4 +1,5 @@
 ﻿using Graduation.Dto.Request;
+using Graduation.Dto.Response;
 using Graduation.Filter;
 using Graduation.Managers;
 using log4net;
@@ -38,10 +39,19 @@ namespace Graduation.Controllers
             log.InfoFormat(userName + " || Get into 首页");
             try
             {
-                //var list = await _indexManager.GetGoodsAsync(code);
-                //log.InfoFormat("获取商品列表成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
-                //ViewData["UserName"] = userName;
-                return View();
+                //获取商品列表
+                var goodlist = await _indexManager.GetGoodsAsync(code);
+                //获取类型列表
+                var typelist = await _indexManager.GetTypesAsync();
+                var list = new IndexResponse()
+                {
+                    GoodList = goodlist,
+                    TypeList = typelist
+                };
+                log.InfoFormat("获取商品列表成功" + (goodlist != null ? Helper.JsonHelper.ToJson(goodlist) : ""));
+                log.InfoFormat("获取类型列表成功" + (typelist != null ? Helper.JsonHelper.ToJson(typelist) : ""));
+                ViewData["UserName"] = userName;
+                return View(list);
             }
             catch (Exception e)
             {

@@ -17,6 +17,7 @@ namespace Graduation.Models
         public DbSet<Good> Good { get; set; }
         public DbSet<Address> Address { get; set; }
         public DbSet<Favorite> Favorite { get; set; }
+        public DbSet<Type> Type { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -65,7 +66,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.Name)
                 .HasColumnName("name")
-                .HasColumnType("varchar(11)");
+                .HasColumnType("varchar(50)");
 
                 a.Property(e => e.Price)
                 .HasColumnName("price")
@@ -81,7 +82,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.Details)
                 .HasColumnName("details")
-                .HasColumnType("varchar(255)");
+                .HasColumnType("varchar(50)");
 
                 a.Property(e => e.Type)
                 .HasColumnName("type")
@@ -177,6 +178,20 @@ namespace Graduation.Models
                 a.Property(e => e.GoodId)
                 .HasColumnName("goodid")
                 .HasColumnType("int(11)");
+            });
+
+            builder.Entity<Type>(a =>
+            {
+                a.ToTable("type");
+
+                a.Property(e => e.Id)
+                .HasColumnName("id")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.TypeName)
+                .HasColumnName("typename")
+                .HasColumnType("varchar(50)");
+
             });
         }
     }

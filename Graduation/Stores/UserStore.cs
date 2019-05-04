@@ -44,7 +44,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetuserAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
+        public async Task<TResult> GetuserAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -52,7 +52,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.User.AsNoTracking()).SingleOrDefaultAsync();
+                return await query.Invoke(_context.User.AsNoTracking()).SingleOrDefaultAsync();
             }
             catch (Exception e)
             {
@@ -66,7 +66,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
+        public async Task<TResult> GetAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -74,7 +74,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Address.AsNoTracking()).FirstOrDefaultAsync();
+                return await query.Invoke(_context.Address.AsNoTracking()).FirstOrDefaultAsync();
             }
             catch (Exception e)
             {
@@ -88,7 +88,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<List<TResult>> GetAddressAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
+        public async Task<List<TResult>> GetAddressAsync<TResult>(Func<IQueryable<Address>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -96,7 +96,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Address.AsNoTracking()).ToListAsync();
+                return await query.Invoke(_context.Address.AsNoTracking()).ToListAsync();
             }
             catch (Exception e)
             {

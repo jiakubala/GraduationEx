@@ -25,7 +25,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
+        public async Task<TResult> GetAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -33,7 +33,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.User.AsNoTracking()).SingleOrDefaultAsync();
+                return await query.Invoke(_context.User.AsNoTracking()).SingleOrDefaultAsync();
             }
             catch (Exception e)
             {

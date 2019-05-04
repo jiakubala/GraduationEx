@@ -25,7 +25,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<List<TResult>> GetOrderAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
+        public async Task<List<TResult>> GetOrderAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -33,7 +33,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Order.AsNoTracking()).ToListAsync();
+                return await query.Invoke(_context.Order.AsNoTracking()).ToListAsync();
             }
             catch (Exception e)
             {
@@ -47,7 +47,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
+        public async Task<TResult> GetAsync<TResult>(Func<IQueryable<Order>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -55,7 +55,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Order.AsNoTracking()).FirstOrDefaultAsync();
+                return await query.Invoke(_context.Order.AsNoTracking()).FirstOrDefaultAsync();
             }
             catch (Exception e)
             {

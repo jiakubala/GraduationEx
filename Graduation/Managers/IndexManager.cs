@@ -70,6 +70,29 @@ namespace Graduation.Managers
         }
 
         /// <summary>
+        /// 获取类型列表
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<string>> GetTypesAsync()
+        {
+            try
+            {
+                var list = await _indexStore.GetTypelistAsync();
+                List<string> typelist = new List<string>();
+                foreach (var model in list)
+                {
+                    typelist.Add(model.TypeName);
+                }
+                return typelist;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+
+        /// <summary>
         /// 获取商品列表（分类分支）
         /// </summary>
         /// <returns></returns>

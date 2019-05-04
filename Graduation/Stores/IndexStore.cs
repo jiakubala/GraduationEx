@@ -25,7 +25,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query)
+        public async Task<TResult> GetAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -33,7 +33,25 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Good.AsNoTracking()).FirstOrDefaultAsync();
+                return await query.Invoke(_context.Good.AsNoTracking()).FirstOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 获取类型列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public async Task<List<Models.Type>> GetTypelistAsync()
+        {
+            try
+            {
+                return await _context.Type.AsNoTracking().ToListAsync();
             }
             catch (Exception e)
             {
@@ -66,7 +84,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query)
+        public async Task<List<TResult>> GetGoodAsync<TResult>(Func<IQueryable<Good>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -74,7 +92,8 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Good.AsNoTracking()).ToListAsync();
+                var list =  await query.Invoke(_context.Good.AsNoTracking()).ToListAsync();
+                return list;
             }
             catch (Exception e)
             {
@@ -88,7 +107,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<List<TResult>> GetFavoritelistAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
+        public async Task<List<TResult>> GetFavoritelistAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -96,7 +115,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Favorite.AsNoTracking()).ToListAsync();
+                return await query.Invoke(_context.Favorite.AsNoTracking()).ToListAsync();
             }
             catch (Exception e)
             {
@@ -110,7 +129,7 @@ namespace Graduation.Stores
         /// <typeparam name="TResult"></typeparam>
         /// <param name="query"></param>
         /// <returns></returns>
-        public Task<TResult> GetFavoriteAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
+        public async Task<TResult> GetFavoriteAsync<TResult>(Func<IQueryable<Favorite>, IQueryable<TResult>> query)
         {
             if (query == null)
             {
@@ -118,7 +137,7 @@ namespace Graduation.Stores
             }
             try
             {
-                return query.Invoke(_context.Favorite.AsNoTracking()).FirstOrDefaultAsync();
+                return await query.Invoke(_context.Favorite.AsNoTracking()).FirstOrDefaultAsync();
             }
             catch (Exception e)
             {
