@@ -19,7 +19,7 @@ namespace Graduation
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://192.168.100.149:5003")
+                .UseUrls("http://192.168.17.1:5003")
                 .UseStartup<Startup>();
     }
 }

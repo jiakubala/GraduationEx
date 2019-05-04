@@ -565,3 +565,75 @@
   "美容美妆",
   "其他商品"
 ]
+2019-05-04 21:06:16,408 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆页面
+2019-05-04 21:06:24,134 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-05-04 21:06:26,290 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "phone": 0,
+  "password": "211",
+  "name": "zjc"
+}</format><args>{}</args></log4net.Error>
+2019-05-04 21:06:26,418 [4] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-04 21:06:26,575 [9] INFO  Graduation.Controllers.IndexController [(null)] - 获取商品列表成功[]
+2019-05-04 21:06:26,578 [9] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[]
+2019-05-04 21:16:46,996 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆页面
+2019-05-04 21:16:49,695 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-05-04 21:16:51,582 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "phone": 0,
+  "password": "211",
+  "name": "zjc"
+}</format><args>{}</args></log4net.Error>
+2019-05-04 21:16:51,706 [7] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-04 21:16:52,025 [9] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "type": "男女服装",
+    "facount": 0,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 0,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 3,
+    "name": "无敌大电脑",
+    "price": 7947.00,
+    "stock": 233,
+    "sold": 33,
+    "type": "数码产品",
+    "facount": 0,
+    "createtime": "2019-05-02 21:15:48"
+  },
+  {
+    "goodId": 4,
+    "name": "无敌大空调",
+    "price": 66767.00,
+    "stock": 555,
+    "sold": 34,
+    "type": "家居环境",
+    "facount": 0,
+    "createtime": "2019-05-04 21:16:18"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-04 21:16:52,113 [9] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]

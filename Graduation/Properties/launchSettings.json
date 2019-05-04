@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://192.168.100.147:5003",
+      "applicationUrl": "http://192.168.17.1:5003",
       "sslPort": 44371
     }
   },
@@ -18,11 +18,11 @@
     "Graduation": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://192.168.100.147:5003/",
+      "launchUrl": "http://192.168.17.1:5003/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://192.168.100.147:5003/"
+      "applicationUrl": "http://192.168.17.1:5003/"
     }
   }
 }

@@ -53,7 +53,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.Phone)
                 .HasColumnName("phone")
-                .HasColumnType("int(11)");
+                .HasColumnType("varchar(11)");
             });
 
             builder.Entity<Good>(a =>
