@@ -1,0 +1,48 @@
+﻿@model List<Graduation.Models.User>
+@{
+    ViewData["Title"] = "Alluserlist";
+}
+
+@{var UserName = ViewData["UserName"];}
+<h2>用户列表</h2>
+<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+<table class="table">
+    <thead>
+        <tr>
+            <th><span>用户名</span></th>
+            <th><span>性别</span></th>
+            <th><span>真实姓名</span></th>
+            <th><span>电子邮箱</span></th>
+            <th><span>电话</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sex)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TrueName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    <form asp-action="Deleteuser" method="post">
+                        <input type="hidden" name="userid" value="@item.UserId" />
+                        <input type="submit" value="封禁">
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

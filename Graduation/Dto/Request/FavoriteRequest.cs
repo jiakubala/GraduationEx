@@ -10,7 +10,7 @@ namespace Graduation.Dto.Request
     /// </summary>
     public class FavoriteRequest
     {
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         public int GoodId { get; set; }
     }
 }

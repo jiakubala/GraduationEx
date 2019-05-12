@@ -18,6 +18,7 @@ namespace Graduation.Models
         public DbSet<Address> Address { get; set; }
         public DbSet<Favorite> Favorite { get; set; }
         public DbSet<Type> Type { get; set; }
+        public DbSet<Admin> Admin { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -103,7 +104,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.OrderId)
                 .HasColumnName("orderid")
-                .HasColumnType("int(11)");
+                .HasColumnType("varchar(11)");
 
                 a.Property(e => e.UserId)
                 .HasColumnName("userid")
@@ -128,6 +129,10 @@ namespace Graduation.Models
                 a.Property(e => e.Name)
                 .HasColumnName("name")
                 .HasColumnType("varchar(50)");
+
+                a.Property(e => e.Price)
+                .HasColumnName("price")
+                .HasColumnType("decimal(10)");
             });
 
             builder.Entity<Address>(a =>
@@ -156,7 +161,7 @@ namespace Graduation.Models
 
                 a.Property(e => e.Phone)
                 .HasColumnName("phone")
-                .HasColumnType("int(11)");
+                .HasColumnType("varchar(11)");
 
                 a.Property(e => e.UserId)
                 .HasColumnName("userid")
@@ -192,6 +197,23 @@ namespace Graduation.Models
                 .HasColumnName("typename")
                 .HasColumnType("varchar(50)");
 
+            });
+
+            builder.Entity<Admin>(a =>
+            {
+                a.ToTable("admin");
+
+                a.Property(e => e.Id)
+                .HasColumnName("id")
+                .HasColumnType("int(11)");
+
+                a.Property(e => e.Password)
+                .HasColumnName("password")
+                .HasColumnType("string(11)");
+
+                a.Property(e => e.Name)
+                .HasColumnName("name")
+                .HasColumnType("string(11)");
             });
         }
     }

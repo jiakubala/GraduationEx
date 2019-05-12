@@ -1,0 +1,47 @@
+﻿@model Graduation.Models.Good
+@{
+    ViewData["Title"] = "Addgoodview";
+}
+
+<h2>上传商品</h2>
+<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" asp-action="Addgood">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>商品名</label>
+                <input asp-for="Name" type="text" placeholder="必填" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>商品单价</label>
+                <input asp-for="Price" type="number" placeholder="必填" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>商品类型</label>
+                <input asp-for="Type" type="text" placeholder="必填" class="form-control" />
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>商品库存</label>
+                <input asp-for="Stock" type="number" placeholder="必填" class="form-control" />
+                <span asp-validation-for="Stock" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label>商品描述</label>
+                <input asp-for="Details" type="text" placeholder="选填" class="form-control" />
+                <span asp-validation-for="Details" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="上传" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Allgoodlist">返回</a>
+</div>

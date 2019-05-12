@@ -24,11 +24,29 @@ namespace Graduation.Managers
         /// <param name="password"></param>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<User> GetUserAsync(string password, int id)
+        public async Task<User> GetUserAsync(string password, int? id)
         {
             try
             {
                 return await _loginStore.GetAsync(a => a.Where(b => b.Password == password && b.UserId == id));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 管理员登录验证
+        /// </summary>
+        /// <param name="password"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Admin> GetAdminAsync(string password, int? id)
+        {
+            try
+            {
+                return await _loginStore.GetAdminAsync(a => a.Where(b => b.Password == password && b.Id == id));
             }
             catch (Exception e)
             {

@@ -14,12 +14,14 @@ namespace Graduation.Dto.Request
 
         public int GoodId { get; set; }
 
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
 
         public int GoodNumber { get; set; }
 
         public int OrderState { get; set; }
 
         public string Name { get; set; }
+
+        public decimal Price { get; set; }
     }
 }

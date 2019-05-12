@@ -1,0 +1,311 @@
+﻿@model Graduation.Models.Good
+@{
+    ViewData["Title"] = "Goodlistbranchdetails";
+}
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>商品详细页面</title>
+    <link rel="stylesheet" href="~/css/base.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/shop_common.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/shop_header.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/shop_list.css" type="text/css" />
+    <link rel="stylesheet" href="~/css/shop_goods.css" type="text/css" />
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/topNav.js"></script>
+    <script type="text/javascript" src="~/js/shop_goods.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="shop_hd">
+        <!-- Header TopNav -->
+        <div class="shop_hd_topNav">
+            <div class="shop_hd_topNav_all">
+                <!-- Header TopNav Left -->
+                @{var UserName = ViewData["UserName"];}
+                @if (UserName == null)
+                {
+                    <div class="shop_hd_topNav_all_left">
+                        <p>
+                            您好，欢迎来到
+                            <b>
+                                <a asp-controller="Index" asp-action="Goodlist">牛牛购物</a>
+                            </b>
+                            [<a asp-controller="Login" asp-action="Loginin">登录</a>]
+                            [<a asp-controller="Login" asp-action="Register">注册</a>]
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <div class="shop_hd_topNav_all_left">
+                        <p>
+                            @UserName，欢迎来到
+                            <b>
+                                <a asp-action="Goodlist">牛牛购物</a>
+                            </b>
+                            [<a asp-controller="Login" asp-action="Loginout">注销</a>]
+                        </p>
+                    </div>
+                }
+                <!-- Header TopNav Left End -->
+                <!-- Header TopNav Right -->
+                <div class="shop_hd_topNav_all_right">
+                    <ul class="topNav_quick_menu">
+
+                        <li>
+                            <div class="topNav_menu">
+                                <a href="#" class="topNavHover">我的商城<i></i></a>
+                                <div class="topNav_menu_bd" style="display:none;">
+                                    <ul>
+                                        <li><a title="订单信息" asp-controller="Order" asp-action="Orderbuylist">订单信息管理</a></li>
+                                        <li><a title="个人主页" asp-controller="User" asp-action="Usermessage">个人主页</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topNav_menu">
+                                <a href="#" class="topNavHover">我的收藏<i></i></a>
+                                <div class="topNav_menu_bd" style="display:none;">
+                                    <ul>
+                                        <li><a title="收藏的商品" asp-controller="User" asp-action="Userfavorite">收藏的商品</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topNav_menu">
+                                <a asp-controller="Order" asp-action="Shopcarlist">购物车</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- Header TopNav Right End -->
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+        <!-- Header TopNav End -->
+        <!-- TopHeader Center -->
+        <div class="shop_hd_header">
+            <div class="shop_hd_header_logo">
+                <h1 class="logo"><a><img src="~/images/logo.png" alt="ShopCZ" /></a><span>ShopCZ</span></h1>
+            </div>
+            <div class="shop_hd_header_search">
+            </div>
+        </div>
+        <!-- TopHeader Center End -->
+        <!-- Header Menu -->
+        <div class="shop_hd_menu">
+            <!-- 所有商品菜单 -->
+
+            <div id="shop_hd_menu_all_category" class="shop_hd_menu_all_category">
+                <!-- 首页去掉 id="shop_hd_menu_all_category" 加上clsss shop_hd_menu_hover -->
+                <div class="shop_hd_menu_all_category_title"><h2 title="所有商品分类">所有商品分类</h2><i></i></div>
+                <div id="shop_hd_menu_all_category_hd" class="shop_hd_menu_all_category_hd">
+                    <ul class="shop_hd_menu_all_category_hd_menu clearfix">
+                    </ul>
+                </div>
+            </div>
+            <!-- 所有商品菜单 END -->
+            <!-- 普通导航菜单 -->
+            <ul class="shop_hd_menu_nav">
+                <li class="current_link"><a asp-controller="Index" asp-action="Goodlist"><span>首页</span></a></li>
+                <li class="link"><a asp-controller="Index" asp-action="Goodlist"><span>限时抢购</span></a></li>
+                <li class="link"><a asp-controller="Index" asp-action="Goodlist"><span>品牌精选</span></a></li>
+                <li class="link"><a asp-controller="Index" asp-action="Goodlist"><span>新品上市</span></a></li>
+            </ul>
+            <!-- 普通导航菜单 End -->
+        </div>
+        <!-- Header Menu End -->
+
+    </div>
+    <div class="clear"></div>
+    <!-- Header End -->
+    </div>
+    <div class="clear"></div>
+    <!-- 面包屑 注意首页没有 -->
+    <div class="shop_hd_breadcrumb">
+        <strong>当前位置：</strong>
+        <span>
+            <a asp-action="Goodlist">首页</a>&nbsp;›&nbsp;
+            <a>商品分类</a>&nbsp;›&nbsp;
+            <a>@Model.Type</a>&nbsp;›&nbsp;
+            <a>@Model.Name</a>
+        </span>
+    </div>
+    <div class="clear"></div>
+    <!-- 面包屑 End -->
+    <!-- Header End -->
+    <!-- Goods Body -->
+    <div class="shop_goods_bd clear">
+
+        <!-- 商品展示 -->
+        <div class="shop_goods_show">
+            <div class="shop_goods_show_left">
+                <!-- 京东商品展示 -->
+                <link rel="stylesheet" href="~/css/shop_goodPic.css" type="text/css" />
+                <script type="text/javascript" src="~/js/shop_goodPic_base.js"></script>
+                <script type="text/javascript" src="~/js/lib.js"></script>
+                <script type="text/javascript" src="~/js/163css.js"></script>
+                <div id="preview">
+                    <div class=jqzoom id="spec-n1" onClick="window.open('/')">
+                        <IMG height="350" src="~/images/img04.jpg" jqimg="~/images/img04.jpg" width="350">
+                    </div>
+                    <div id="spec-n5">
+                        <div class=control id="spec-left">
+                            <img src="~/images/left.gif" />
+                        </div>
+                        <div id="spec-list">
+                            <ul class="list-h">
+                                <li><img src="~/images/img01.jpg"> </li>
+                                <li><img src="~/images/img02.jpg"> </li>
+                                <li><img src="~/images/img03.jpg"> </li>
+                                <li><img src="~/images/img04.jpg"> </li>
+                                <li><img src="~/images/img01.jpg"> </li>
+                                <li><img src="~/images/img02.jpg"> </li>
+                                <li><img src="~/images/img03.jpg"> </li>
+                                <li><img src="~/images/img04.jpg"> </li>
+                                <li><img src="~/images/img01.jpg"> </li>
+                                <li><img src="~/images/img02.jpg"> </li>
+                                <li><img src="~/images/img03.jpg"> </li>
+                                <li><img src="~/images/img04.jpg"> </li>
+                            </ul>
+                        </div>
+                        <div class=control id="spec-right">
+                            <img src="~/images/right.gif" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <SCRIPT type=text/javascript>
+                    $(function () {
+                        $(".jqzoom").jqueryzoom({
+                            xzoom: 400,
+                            yzoom: 400,
+                            offset: 10,
+                            position: "right",
+                            preload: 1,
+                            lens: 1
+                        });
+                        $("#spec-list").jdMarquee({
+                            deriction: "left",
+                            width: 350,
+                            height: 56,
+                            step: 2,
+                            speed: 4,
+                            delay: 10,
+                            control: true,
+                            _front: "#spec-right",
+                            _back: "#spec-left"
+                        });
+                        $("#spec-list img").bind("mouseover", function () {
+                            var src = $(this).attr("src");
+                            $("#spec-n1 img").eq(0).attr({
+                                src: src.replace("\/n5\/", "\/n1\/"),
+                                jqimg: src.replace("\/n5\/", "\/n0\/")
+                            });
+                            $(this).css({
+                                "border": "2px solid #ff6600",
+                                "padding": "1px"
+                            });
+                        }).bind("mouseout", function () {
+                            $(this).css({
+                                "border": "1px solid #ccc",
+                                "padding": "2px"
+                            });
+                        });
+                    })
+                </SCRIPT>
+                <!-- 京东商品展示 End -->
+
+            </div>
+            <div class="shop_goods_show_right">
+                <ul>
+                    <li>
+                        <strong style="font-size:14px; font-weight:bold;">@Model.Name</strong>
+                    </li>
+                    <li>
+                        <label>价格：</label>
+                        <span><strong>@Model.Price</strong>元</span>
+                    </li>
+                    <li>
+                        <label>累计售出：</label>
+                        <span>@Model.Sold 件</span>
+                    </li>
+                    <li style="padding:20px 0;">
+                        <label>购买数量：</label>
+                        <form class="goods_sub goods_sub_gou" asp-controller="Order" asp-action="AddShopcar" method="post">
+                            <input type="hidden" name="GoodId" value="@Model.GoodId" />
+                            <input type="hidden" name="Price" value="@Model.Price" />
+                            <input type="number" value="1" name="GoodNumber" class="text" />
+                            <input type="hidden" name="Name" value="@Model.Name" />
+                            <input type="submit" value="加入购物车">
+                            (当前库存 @Model.Stock 件)
+                        </form>
+                    </li>
+                    <li style="padding:20px 0;">
+                        <label>&nbsp;</label>
+                        <form class="goods_sub goods_sub_gou" asp-controller="User" asp-action="Userfavorite" method="post">
+                            <input type="hidden" name="GoodId" value="@Model.GoodId" />
+                            <input type="submit" value="加入收藏">
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- 商品展示 End -->
+
+        <div class="clear mt15"></div>
+        <!-- Goods Left -->
+        <div class="shop_bd_list_left clearfix">
+        </div>
+        <!-- Goods Left End -->
+        <!-- 商品详情 -->
+        <script type="text/javascript" src="~/js/shop_goods_tab.js"></script>
+        <div class="shop_goods_bd_xiangqing clearfix">
+            <div class="shop_goods_bd_xiangqing_tab">
+                <ul>
+                    <li><a ><span>商品详情</span></a></li>
+                </ul>
+            </div>
+            <div class="shop_goods_bd_xiangqing_content clearfix">
+                <div>
+                    <p>@Model.Details</p>
+                </div>
+            </div>
+        </div>
+        <!-- 商品详情 End -->
+
+    </div>
+    <!-- Goods Body End -->
+    <!-- Footer  -->
+    <div class="clear"></div>
+    <div class="shop_footer">
+        <div class="shop_footer_link">
+            <p>
+                <a href="">首页</a>|
+                <a href="">招聘英才</a>|
+                <a href="">广告合作</a>|
+                <a href="">关于LXSH</a>|
+                <a href="">关于我们</a>
+            </p>
+        </div>
+        <div class="shop_footer_copy">
+            <p>Copyright 2018-2080 itcast Inc.,All rights reserved.</p>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+</body>
+</html>
+
+

@@ -11,5 +11,7 @@ namespace Graduation.Dto.Response
         public List<Good> GoodList { get; set; }
 
         public List<string> TypeList { get; set; }
+
+        public string Typename { get; set; }
     }
 }

@@ -13210,7 +13210,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://192.168.100.162/nuget": {},
         "http://rd.xinkongjian.tech/nuget": {},
         "http://www.myget.org/F/aspnet-contrib/api/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}

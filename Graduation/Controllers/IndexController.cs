@@ -33,14 +33,14 @@ namespace Graduation.Controllers
         /// <returns></returns>
         [HttpGet]
         [TypeFilter(typeof(SessionFilter))]
-        public async Task<IActionResult> Goodlist(int code)
+        public async Task<IActionResult> Goodlist()
         {
             string userName = HttpContext.Session.GetString("UserName");
             log.InfoFormat(userName + " || Get into 首页");
             try
             {
                 //获取商品列表
-                var goodlist = await _indexManager.GetGoodsAsync(code);
+                var goodlist = await _indexManager.GetGoodsAsync();
                 //获取类型列表
                 var typelist = await _indexManager.GetTypesAsync();
                 var list = new IndexResponse()
@@ -72,8 +72,17 @@ namespace Graduation.Controllers
             log.InfoFormat(userName + " || Get into 商品列表");
             try
             {
-                var list = await _indexManager.GetGoodstypeAsync(condition);
-                log.InfoFormat("获取分类商品列表成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                var goodlist = await _indexManager.GetGoodstypeAsync(condition);
+                //获取类型列表
+                var typelist = await _indexManager.GetTypesAsync();
+                var list = new IndexResponse()
+                {
+                    GoodList = goodlist,
+                    TypeList = typelist,
+                    Typename = condition.Typename
+                };
+                log.InfoFormat("获取分类商品列表成功" + (goodlist != null ? Helper.JsonHelper.ToJson(goodlist) : ""));
+                log.InfoFormat("获取类型列表成功" + (typelist != null ? Helper.JsonHelper.ToJson(typelist) : ""));
                 ViewData["UserName"] = userName;
                 return View(list);
             }
@@ -97,8 +106,17 @@ namespace Graduation.Controllers
             log.InfoFormat(userName + " || Get into 分类商品列表排序");
             try
             {
-                var list = await _indexManager.OrderGoodstypeAsync(condition);
+                //获取类型列表
+                var typelist = await _indexManager.GetTypesAsync();
+                var goodlist = await _indexManager.OrderGoodstypeAsync(condition);
+                var list = new IndexResponse()
+                {
+                    GoodList = goodlist,
+                    TypeList = typelist,
+                    Typename = condition.TypeName
+                };
                 log.InfoFormat("获取分类商品列表排序成功" + (list != null ? Helper.JsonHelper.ToJson(list) : ""));
+                log.InfoFormat("获取类型列表成功" + (typelist != null ? Helper.JsonHelper.ToJson(typelist) : ""));
                 ViewData["UserName"] = userName;
                 return View(list);
             }
@@ -116,7 +134,7 @@ namespace Graduation.Controllers
         /// <returns></returns>
         [HttpGet]
         [TypeFilter(typeof(SessionFilter))]
-        public async Task<IActionResult> Goodlistbranch(int goodid)
+        public async Task<IActionResult> Goodlistbranchdetails(int goodid)
         {
             string userName = HttpContext.Session.GetString("UserName");
             log.InfoFormat(userName + " || Get into 商品详情");

@@ -71,5 +71,19 @@ namespace Graduation.Stores
         /// <param name="fdd"></param>
         /// <returns></returns>
         Task Favoritedelete(Favorite fdd);
+
+        /// <summary>
+        /// 删除商品
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        Task Gooddelete(Good good);
+
+        /// <summary>
+        /// 新增商品
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        Task Goodadd(Good good);
     }
 }

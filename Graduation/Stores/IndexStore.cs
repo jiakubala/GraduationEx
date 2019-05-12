@@ -181,5 +181,42 @@ namespace Graduation.Stores
                 throw e;
             }
         }
+
+        /// <summary>
+        /// 删除商品
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        public async Task Gooddelete(Good good)
+        {
+            try
+            {
+                _context.Good.Remove(good);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 新增商品
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        public async Task Goodadd(Good good)
+        {
+            try
+            {
+                await _context.Good.AddAsync(good);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
     }
 }

@@ -12,9 +12,14 @@ namespace Graduation.Dto.Request
     public class GoodlistinfoRequest
     {
         /// <summary>
-        /// 已有的商品列表
+        /// 商品类型
         /// </summary>
-        public List<Good> Goodlist { get; set; }
+        public string TypeName { get; set; }
+
+        /// <summary>
+        /// 已有的商品id数组
+        /// </summary>
+        public List<int> Goodidlist { get; set; }
 
         /// <summary>
         /// 是否根据销量排序

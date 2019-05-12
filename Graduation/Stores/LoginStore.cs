@@ -42,6 +42,28 @@ namespace Graduation.Stores
         }
 
         /// <summary>
+        /// 查询Admin实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public async Task<TResult> GetAdminAsync<TResult>(Func<IQueryable<Admin>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return await query.Invoke(_context.Admin.AsNoTracking()).SingleOrDefaultAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
         /// 增加用户
         /// </summary>
         /// <param name="user"></param>

@@ -1,0 +1,269 @@
+﻿@model Graduation.Dto.Response.ShopflowResponse
+@{
+    ViewData["Title"] = "Payment";
+}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>账户充值</title>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/css/main.css">
+    <link rel="stylesheet" href="~/css/shop_gouwuche.css" type="text/css" />
+    <script type="text/javascript" src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/shop_gouwuche.js"></script>
+    <style>
+
+        .rechargeh-left {
+            border: 3px solid #bbcbef;
+            font-size: 14px;
+            color: #333;
+            display: block;
+            height: 66px;
+            padding: 14px 20px 0;
+        }
+
+        .recharge-main {
+            border: 3px solid #bbcbef;
+        }
+
+        .fa {
+            font-size: 40px;
+            color: #b5de70;
+        }
+
+        .rechargeh-span {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .rechargeh-fa {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .rechargeh-money {
+            float: right;
+            padding-top: 10px;
+        }
+
+            .rechargeh-money b {
+                color: #688e00;
+            }
+
+        .recharge-main {
+            margin-top: 30px;
+            padding: 5px 10px;
+        }
+
+        .rechargem-main {
+            background-color: #f4f6fd;
+            height: 165px;
+        }
+
+        .kj-area {
+            background-color: #f4f6fd;
+            padding: 20px 0 0 10px;
+            margin-bottom: 30px;
+        }
+
+        .icon {
+            float: left;
+            width: 92px;
+            height: 26px;
+            margin-top: 4px;
+            margin-left: 5px;
+            background: url(/images/spritemap3.png) no-repeat 0 -616px;
+            padding: 0 10px;
+            color: #07F;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+        }
+
+        .kuaiicon {
+            float: left;
+            width: 106px;
+            height: 17px;
+            line-height: 26px;
+            margin-top: 10px;
+            margin-right: 15px;
+            background: url(/images/spritemap3.png) no-repeat 0 -651px;
+        }
+
+        .poptip {
+            float: left;
+            margin-right: 10px;
+            z-index: 101;
+            zoom: 1;
+            line-height: 30px;
+            padding: 0 10px;
+            font-size: 12px;
+            background: #fff;
+            border: 1px solid #bbcbef;
+        }
+
+        .poptip-map {
+            height: 20px;
+            width: 22px;
+            line-height: 30px;
+            float: left;
+            margin-top: 5px;
+            margin-right: 5px;
+            background: url(/images/spritemap3.png) no-repeat 0 -680px;
+        }
+
+        .long-logo {
+            padding: 40px 20px 0 10px;
+        }
+
+            .long-logo li {
+                list-style-type: none;
+            }
+
+        .logo-main {
+            float: left;
+            margin: 0 10px;
+        }
+
+            .logo-main input {
+                float: left;
+                margin-top: 14px;
+            }
+
+        .bank-logo {
+            border: 1px solid #ddd;
+            width: 190px;
+            line-height: 36px;
+            float: left;
+            margin-left: 5px;
+            background: #fff;
+        }
+
+        .logo {
+            float: left;
+            width: 126px;
+            padding: 0;
+            background: url(/images/zhaoshangall.png) no-repeat 5px center;
+            background-size: 80px 20px;
+            display: inline-block;
+            height: 38px;
+        }
+
+        .logo1 {
+            float: left;
+            width: 126px;
+            padding: 0;
+            background: url(/images/nonghang.png) no-repeat 5px center;
+            background-size: 80px 20px;
+            display: inline-block;
+            height: 38px;
+        }
+
+        .form-group {
+            margin-top: 40px;
+        }
+
+        .btn-block {
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shop_gwc_bd clearfix">
+        <div class="shop_gwc_bd_contents clearfix">
+            <div class="shop_gwc_bd_contents_lc clearfix">
+                <ul>
+                    <li class="step_a">确认购物清单</li>
+                    <li class="step_b">确认收货人资料及送货方式</li>
+                    <li class="step_c hover_c">购买完成</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="animated fadeInRight">
+        <div class="container">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        支付
+                        <a class="return" href="javascript:history.go(-1)">返回主页</a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="rechargeh-left">
+                        <div class="rechargeh-fa">
+                            <!--<i class="fa">&#xf058;</i>-->
+                        </div>
+                        <div class="rechargeh-span">
+                            <span class="">
+                                <b>待支付</b>
+                            </span>
+                        </div>
+                        @{var num = ViewData["Num"];}
+                        <span class="rechargeh-money">
+                            <b>@num</b>元
+                        </span>
+                    </div>
+                    <div class="recharge-main">
+                        <form action="Paymentinfo" method="post" id="" class="form-horizontal" role="form">
+                            <h3 class="rechargem-head">储蓄卡</h3>
+                            <div class="rechargem-main">
+                                <div class="kj-area">
+                                    <span class="icon"></span>
+                                    <span class="kuaiicon"></span>
+                                    <div class="poptip">
+                                        <span class="poptip-map"></span>
+                                        <span class="">付款过程安全流畅</span>
+                                    </div>
+                                </div>
+                                <ul class="long-logo">
+                                    <li class="logo-main">
+                                        <input type="radio" class="radio1">
+                                        <div class="bank-logo">
+                                            <span class="logo"></span>
+                                            **8385
+                                        </div>
+                                    </li>
+                                    <li class="logo-main">
+                                        <input type="radio" class="radio1">
+                                        <div class="bank-logo">
+                                            <span class="logo"></span>
+                                            **8385
+                                        </div>
+                                    </li>
+                                    <li class="logo-main">
+                                        <input type="radio" class="radio1">
+                                        <div class="bank-logo">
+                                            <span class="logo1"></span>
+                                            **8385
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-1 col-md-1">
+                                    @foreach (var id in Model.Orderidlist)
+                                    {
+                                        <input type="hidden" name="orderidlist" value=@id />
+                                    }
+                                    <button type="submit" id="btnSubmit" class="btn btn-info btn-block">支付</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var btn = document.querySelector("#btnSubmit");
+        btn.addEventListener("click", function () {
+            alert("支付成功");
+        });</script>
+</body>
+</html>
+

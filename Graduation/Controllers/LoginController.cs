@@ -64,11 +64,12 @@ namespace Graduation.Controllers
                 if (a == null)
                 {
                     ModelState.AddModelError(nameof(user.Password), "用户名或密码错误");
-                    return View();
+                    return RedirectToAction("Loginin");
                 }
+                var b = Convert.ToInt32(a.UserId);
                 //创建session
                 HttpContext.Session.SetString("UserName", a.Name);
-                HttpContext.Session.SetInt32("UserId", a.UserId);
+                HttpContext.Session.SetInt32("UserId", b);
                 ViewData["UserName"] = a.Name;
                 log.InfoFormat("登陆验证成功" + (a != null ? Helper.JsonHelper.ToJson(a) : ""));
                 return RedirectToAction("Goodlist", "Index");
@@ -118,7 +119,7 @@ namespace Graduation.Controllers
                 var u = await _loginManager.AddAsync(user);
                 log.InfoFormat("注册成功" + (u != null ? Helper.JsonHelper.ToJson(u) : ""));
                 ViewData["Message"] = "注册成功";
-                return View();
+                return RedirectToAction("Loginin");
             }
             catch (Exception e)
             {

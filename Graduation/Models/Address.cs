@@ -42,12 +42,12 @@ namespace Graduation.Models
         /// 电话
         /// </summary>
         [Required]
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         /// <summary>
         /// 收货人ID
         /// </summary>
         [Required]
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
     }
 }

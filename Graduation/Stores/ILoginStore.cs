@@ -20,6 +20,14 @@ namespace Graduation.Stores
         Task<TResult> GetAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query);
 
         /// <summary>
+        /// 查询Admin实体
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<TResult> GetAdminAsync<TResult>(Func<IQueryable<Admin>, IQueryable<TResult>> query);
+
+        /// <summary>
         /// 增加用户
         /// </summary>
         /// <param name="user"></param>

@@ -15,9 +15,11 @@ namespace Graduation.Managers
     public class IndexManager
     {
         protected IIndexStore _indexStore { get; }
-        public IndexManager(IIndexStore indexStore)
+        protected IOrderStore _orderStore { get; }
+        public IndexManager(IIndexStore indexStore, IOrderStore orderStore)
         {
             _indexStore = indexStore;
+            _orderStore = orderStore;
         }
 
         /// <summary>
@@ -41,26 +43,11 @@ namespace Graduation.Managers
         /// 获取商品列表
         /// </summary>
         /// <returns></returns>
-        public async Task<List<Good>> GetGoodsAsync(int code)
+        public async Task<List<Good>> GetGoodsAsync()
         {
             try
             {
                 var list = await _indexStore.GetGoodAsync(a => a.Where(b => b.Stock != 0));
-                //特别推荐
-                if (code == 1)
-                {
-                    return list.OrderByDescending(a => a.Facount).ToList();
-                }
-                //新品上架
-                if (code == 2)
-                {
-                    return list.OrderByDescending(a => a.Createtime).ToList();
-                }
-                //热门商品
-                if (code == 3)
-                {
-                    return list.OrderBy(a => a.Facount).ToList();
-                }
                 return list;
             }
             catch (Exception e)
@@ -128,23 +115,90 @@ namespace Graduation.Managers
         {
             try
             {
+                var list = await _indexStore.GetGoodAsync(a => a.Where(b => condition.Goodidlist.Contains(b.GoodId)));
                 //是否根据销量排序
                 if (condition.IsSales != null)
                 {
-                    return condition.Goodlist.OrderByDescending(a => a.Sold).ToList();
+                    return list.OrderByDescending(a => a.Sold).ToList();
                 }
                 //根据价格排序
                 if (condition.IsPrice != null)
                 {
-                    return condition.Goodlist.OrderByDescending(a => a.Price).ToList();
+                    return list.OrderByDescending(a => a.Price).ToList();
                 }
                 //根据价格区间排序
                 if (condition.Minprice != null && condition.Maxprice != null)
                 {
-                    return condition.Goodlist.Where(a => a.Price >= condition.Minprice && a.Price <= condition.Maxprice).ToList();
+                    return list.Where(a => a.Price >= condition.Minprice && a.Price <= condition.Maxprice).ToList();
                 }
                 //默认
-                return condition.Goodlist;
+                return list;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除商品
+        /// </summary>
+        /// <param name="goodid"></param>
+        /// <returns></returns>
+        public async Task DeleteGoodAsync(int goodid)
+        {
+            try
+            {
+                var good = await _indexStore.GetAsync(a => a.Where(b => b.GoodId == goodid));
+                var orders = await _orderStore.GetOrderAsync(a => a.Where(b => b.GoodId == goodid && b.OrderState == 1));
+                await _indexStore.Gooddelete(good);
+                foreach (var order in orders)
+                { 
+                    await _orderStore.Orderdelete(order);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 新增商品
+        /// </summary>
+        /// <param name="good"></param>
+        /// <returns></returns>
+        public async Task AddGoodAsync(Good good)
+        {
+            try
+            {
+                var oldtypes = await _indexStore.GetTypelistAsync();
+                List<string> typenames = new List<string>();
+                foreach (var oldtyoe in oldtypes)
+                {
+                    typenames.Add(oldtyoe.TypeName);
+                }
+                if (typenames.Contains(good.Type))
+                {
+                    await _indexStore.Goodadd(new Good
+                    {
+                        Name = good.Name,
+                        Price = good.Price,
+                        Type = good.Type,
+                        Stock = good.Stock,
+                        Details = good.Details,
+                        Createtime = DateTime.Now
+                    });
+                }
+                await _indexStore.Goodadd(new Good
+                {
+                    Name = good.Name,
+                    Price = good.Price,
+                    Type = "其他商品",
+                    Stock = good.Stock,
+                    Details = good.Details,
+                    Createtime = DateTime.Now
+                });
             }
             catch (Exception e)
             {

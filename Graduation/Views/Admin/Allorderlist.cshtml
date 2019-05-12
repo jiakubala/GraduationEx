@@ -1,0 +1,89 @@
+﻿@model List<Graduation.Models.Order>
+@{
+    ViewData["Title"] = "Allorderlist";
+}
+@{var UserName = ViewData["UserName"];}
+<h2>订单列表</h2>
+<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+<table class="table">
+    <thead>
+        <tr>
+            <th><span>订单号</span></th>
+            <th><span>商品名</span></th>
+            <th><span>购买者</span></th>
+            <th><span>单价</span></th>
+            <th><span>数量</span></th>
+            <th><span>总价</span></th>
+            <th><span>状态</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OrderId)
+                </td>
+                <td>
+                    <a href="/Index/Goodlistbranchdetails?goodid=@item.GoodId">@item.Name</a>
+                </td>
+                <td>
+                    @UserName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoodNumber)
+                </td>
+                @{ var zongjia = item.GoodNumber * item.Price;}
+                <td>
+                    @Html.DisplayFor(modelItem => zongjia)
+                </td>
+                @if (item.OrderState == 1)
+                {
+                    <td>
+                        <a>等待买家付款</a>
+                    </td>
+                }
+                @if (item.OrderState == 2)
+                {
+                    <td>
+                        <a>买家已付款，等待发货</a>
+                    </td>
+                }
+                @if (item.OrderState == 3)
+                {
+                    <td>
+                        <a>已发货，等待收货</a>
+                    </td>
+                }
+                @if (item.OrderState == 4)
+                {
+                    <td>
+                        <a>已收货，完成交易</a>
+                    </td>
+                }
+                <td>
+                <td>
+                    <form asp-action="Deleteorder">
+                        <input type="hidden" name="orderid" value="@item.OrderId" />
+                        <input type="submit" value="删除">
+                    </form>
+                </td>
+                @if (item.OrderState == 2)
+                {
+                    <td>
+                        <form asp-action="UpadateOrderState" style="float:right" method="post">
+                            <input type="hidden" name="OrderId" value="@item.OrderId" />
+                            <input type="hidden" name="OrderState" value="3" />
+                            <input type="submit" value="发货">
+                        </form>
+                    </td>
+                }
+
+            </tr>
+        }
+    </tbody>
+</table>
+

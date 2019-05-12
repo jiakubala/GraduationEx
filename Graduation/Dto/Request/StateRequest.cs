@@ -10,7 +10,7 @@ namespace Graduation.Dto.Request
     /// </summary>
     public class StateRequest
     {
-        public int OrderId { get; set; }
+        public List<string> OrderId { get; set; }
 
         public int OrderState { get; set; }
     }

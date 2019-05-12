@@ -24,13 +24,12 @@ namespace Graduation.Stores
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async Task<User> Userupdate(User user)
+        public async Task Userupdate(User user)
         {
             try
             {
                 _context.User.Update(user);
                 await _context.SaveChangesAsync();
-                return await _context.User.Where(a => a.UserId == user.UserId).FirstOrDefaultAsync();
             }
             catch (Exception e)
             {
@@ -59,6 +58,29 @@ namespace Graduation.Stores
                 throw e;
             }
         }
+
+        /// <summary>
+        /// 获取用户列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public async Task<List<TResult>> GetuserlistAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query)
+        {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+            try
+            {
+                return await query.Invoke(_context.User.AsNoTracking()).ToListAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
 
         /// <summary>
         /// 查询Address实体
@@ -153,6 +175,24 @@ namespace Graduation.Stores
             try
             {
                 _context.Address.Remove(add);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public async Task Userdelete(User user)
+        {
+            try
+            {
+                _context.User.Remove(user);
                 await _context.SaveChangesAsync();
             }
             catch (Exception e)

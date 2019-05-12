@@ -1,0 +1,26 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=localhost;UserId=root;Password=123;Database=graduationproject"
+    }
+  },
+
+  "FileServer": {
+    "PathList": [
+      {
+        "LocalPath": "d:\\files\\all",
+        "Url": "/files"
+      },
+      {
+        "LocalPath": "d:\\files\\images",
+        "Url": "/images",
+        "Exts": [
+          ".jpeg",
+          ".jpg",
+          ".png"
+        ]
+      }
+    ]
+  }
+}
+

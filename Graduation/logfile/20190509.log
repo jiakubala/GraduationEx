@@ -1,0 +1,2259 @@
+﻿2019-05-09 00:02:50,946 [61] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 00:02:50,994 [68] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 6,
+  "name": "哼哼哈兮",
+  "price": 9797.00,
+  "stock": 23,
+  "sold": 3,
+  "type": "男女服装",
+  "facount": 69,
+  "createtime": "2019-05-05 14:19:52"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:33,629 [74] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 00:04:33,667 [76] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 6,
+  "name": "哼哼哈兮",
+  "price": 9797.00,
+  "stock": 23,
+  "sold": 3,
+  "type": "男女服装",
+  "facount": 69,
+  "createtime": "2019-05-05 14:19:52"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:38,677 [74] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 00:04:38,699 [8] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:38,751 [8] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:04:42,963 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 00:04:43,012 [69] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:50,203 [76] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 00:04:50,228 [72] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:50,294 [72] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:04:51,349 [77] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 00:04:51,376 [79] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 00:04:52,589 [8] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 00:04:52,610 [69] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:52,681 [69] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:04:54,591 [74] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品列表
+2019-05-09 00:04:54,629 [75] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:04:54,692 [75] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:07:01,657 [74] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品列表
+2019-05-09 00:07:01,680 [77] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:07:01,739 [77] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:07:04,309 [77] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 00:07:04,335 [74] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 00:07:06,582 [77] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 00:07:06,603 [66] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:07:06,674 [66] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 00:07:42,208 [77] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 00:07:42,228 [63] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:07:46,916 [77] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 订单评价
+2019-05-09 00:07:46,944 [64] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取订单评价成功[
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:08:39,804 [59] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 订单评价
+2019-05-09 00:08:39,824 [58] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取订单评价成功[
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 00:08:41,802 [59] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 00:08:41,819 [74] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 22:47:51,767 [8] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆页面
+2019-05-09 22:47:52,356 [9] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆页面
+2019-05-09 22:47:54,786 [7] INFO  Graduation.Controllers.LoginController [(null)] -  || Get into 登陆验证
+2019-05-09 22:47:56,898 [3] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>登陆验证成功{
+  "userId": 197,
+  "trueName": "右减除",
+  "phone": "13193119597",
+  "password": "211",
+  "name": "zjc",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:47:57,113 [7] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 22:47:57,246 [12] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:47:57,332 [12] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:48:20,362 [8] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品列表
+2019-05-09 22:48:20,410 [7] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:20,468 [7] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:48:22,382 [17] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 分类商品列表排序
+2019-05-09 22:48:22,423 [15] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表排序成功{
+  "goodList": [
+    {
+      "goodId": 6,
+      "name": "哼哼哈兮",
+      "price": 9797.00,
+      "stock": 23,
+      "sold": 3,
+      "type": "男女服装",
+      "facount": 69,
+      "createtime": "2019-05-05 14:19:52"
+    },
+    {
+      "goodId": 1,
+      "name": "无敌大裙子",
+      "price": 2333.00,
+      "stock": 211,
+      "sold": 33,
+      "details": "我依旧是 西蜀霸王！！",
+      "type": "男女服装",
+      "facount": 1,
+      "createtime": "2019-05-01 21:13:53"
+    }
+  ],
+  "typeList": [
+    "男女服装",
+    "鞋包配饰",
+    "数码产品",
+    "家居环境",
+    "生活用品",
+    "零食水果",
+    "美容美妆",
+    "其他商品"
+  ],
+  "typename": "男女服装"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:22,473 [15] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:48:23,926 [9] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 分类商品列表排序
+2019-05-09 22:48:23,946 [16] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表排序成功{
+  "goodList": [
+    {
+      "goodId": 1,
+      "name": "无敌大裙子",
+      "price": 2333.00,
+      "stock": 211,
+      "sold": 33,
+      "details": "我依旧是 西蜀霸王！！",
+      "type": "男女服装",
+      "facount": 1,
+      "createtime": "2019-05-01 21:13:53"
+    },
+    {
+      "goodId": 6,
+      "name": "哼哼哈兮",
+      "price": 9797.00,
+      "stock": 23,
+      "sold": 3,
+      "type": "男女服装",
+      "facount": 69,
+      "createtime": "2019-05-05 14:19:52"
+    }
+  ],
+  "typeList": [
+    "男女服装",
+    "鞋包配饰",
+    "数码产品",
+    "家居环境",
+    "生活用品",
+    "零食水果",
+    "美容美妆",
+    "其他商品"
+  ],
+  "typename": "男女服装"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:24,008 [16] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:48:36,004 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 22:48:36,036 [16] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 22:48:44,559 [8] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 22:48:44,581 [9] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:44,655 [9] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:48:48,952 [7] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:48:48,990 [8] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 0,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:50,800 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 添加购物车商品
+2019-05-09 22:48:51,014 [21] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 0,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:51,058 [21] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>添加购物车商品成功{
+  "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+  "goodId": 7,
+  "userId": 197,
+  "goodNumber": 1,
+  "orderState": 1,
+  "name": "嘻嘻",
+  "price": 123.00
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:52,115 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 添加购物车商品
+2019-05-09 22:48:52,177 [7] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 0,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:52,215 [7] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>添加购物车商品成功{
+  "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+  "goodId": 7,
+  "userId": 197,
+  "goodNumber": 1,
+  "orderState": 1,
+  "name": "嘻嘻",
+  "price": 123.00
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:48:58,009 [7] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:48:58,024 [7] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 0,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:49:06,994 [7] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 22:49:07,016 [8] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:49:07,078 [8] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 22:49:10,778 [8] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:49:10,798 [8] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00,
+  "stock": 211,
+  "sold": 33,
+  "details": "我依旧是 西蜀霸王！！",
+  "type": "男女服装",
+  "facount": 1,
+  "createtime": "2019-05-01 21:13:53"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:49:11,942 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 添加购物车商品
+2019-05-09 22:49:11,981 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00,
+  "stock": 211,
+  "sold": 33,
+  "details": "我依旧是 西蜀霸王！！",
+  "type": "男女服装",
+  "facount": 1,
+  "createtime": "2019-05-01 21:13:53"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:49:12,013 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>添加购物车商品成功{
+  "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+  "goodId": 1,
+  "userId": 197,
+  "goodNumber": 1,
+  "orderState": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:49:13,251 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 22:49:13,267 [22] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的购物车列表成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:10,116 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 22:51:10,139 [24] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的购物车列表成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:14,620 [19] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:51:14,642 [3] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00,
+  "stock": 211,
+  "sold": 33,
+  "details": "我依旧是 西蜀霸王！！",
+  "type": "男女服装",
+  "facount": 1,
+  "createtime": "2019-05-01 21:13:53"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:17,302 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 22:51:17,319 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的购物车列表成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:25,543 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:51:25,662 [26] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功{
+  "adds": [
+    {
+      "keyId": 1,
+      "name": "左佳成",
+      "local": "重庆",
+      "addres": "重庆市渝北区",
+      "zipCode": 400133,
+      "phone": "13193119597",
+      "userId": 197
+    },
+    {
+      "keyId": 2,
+      "name": "右减除",
+      "local": "南京",
+      "addres": "南京市大兴区",
+      "zipCode": 54445,
+      "phone": "45151515",
+      "userId": 197
+    }
+  ],
+  "orderidlist": [
+    "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "d8be23e6-0e8c-41fb-a6ca-43da284880a1"
+  ]
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:30,575 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 转到支付页面
+2019-05-09 22:51:30,614 [25] INFO  Graduation.Controllers.LoginController [(null)] - 转到支付页面成功
+2019-05-09 22:51:43,711 [19] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:51:43,724 [13] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功{
+  "adds": [
+    {
+      "keyId": 1,
+      "name": "左佳成",
+      "local": "重庆",
+      "addres": "重庆市渝北区",
+      "zipCode": 400133,
+      "phone": "13193119597",
+      "userId": 197
+    },
+    {
+      "keyId": 2,
+      "name": "右减除",
+      "local": "南京",
+      "addres": "南京市大兴区",
+      "zipCode": 54445,
+      "phone": "45151515",
+      "userId": 197
+    }
+  ],
+  "orderidlist": [
+    "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "d8be23e6-0e8c-41fb-a6ca-43da284880a1"
+  ]
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:51:56,011 [24] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 转到支付页面
+2019-05-09 22:51:56,049 [13] INFO  Graduation.Controllers.LoginController [(null)] - 转到支付页面成功
+2019-05-09 22:51:59,368 [24] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 支付完成
+2019-05-09 22:51:59,531 [18] INFO  Graduation.Controllers.LoginController [(null)] - 支付成功
+2019-05-09 22:51:59,559 [28] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 22:51:59,571 [18] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 22:52:07,701 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取个人资料
+2019-05-09 22:52:07,725 [28] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取个人资料成功{
+  "userId": 197,
+  "trueName": "右减除",
+  "phone": "13193119597",
+  "password": "211",
+  "name": "zjc",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:52:09,467 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 22:52:09,496 [28] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:52:45,732 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 22:52:45,752 [27] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:52:48,789 [27] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:52:48,802 [27] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00,
+  "stock": 211,
+  "sold": 33,
+  "details": "我依旧是 西蜀霸王！！",
+  "type": "男女服装",
+  "facount": 1,
+  "createtime": "2019-05-01 21:13:53"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:52:51,969 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 22:52:51,986 [13] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:53:01,879 [17] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的收藏
+2019-05-09 22:53:01,924 [22] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的收藏成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:53:28,218 [13] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的收藏
+2019-05-09 22:53:28,245 [7] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的收藏成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:53:49,553 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的收藏
+2019-05-09 22:53:49,577 [33] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的收藏成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:53:52,551 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的收藏
+2019-05-09 22:53:52,576 [35] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的收藏成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:54:22,244 [18] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 22:54:22,264 [7] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 1,
+  "name": "无敌大裙子",
+  "price": 2333.00,
+  "stock": 211,
+  "sold": 33,
+  "details": "我依旧是 西蜀霸王！！",
+  "type": "男女服装",
+  "facount": 1,
+  "createtime": "2019-05-01 21:13:53"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:54:25,032 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 订单评价
+2019-05-09 22:54:25,056 [34] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取订单评价成功[
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:54:34,858 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取个人资料
+2019-05-09 22:54:34,880 [15] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取个人资料成功{
+  "userId": 197,
+  "trueName": "右减除",
+  "phone": "13193119597",
+  "password": "211",
+  "name": "zjc",
+  "sex": "男"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 22:54:35,726 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 进入修改密码
+2019-05-09 22:54:35,726 [8] INFO  Graduation.Controllers.LoginController [(null)] - 进入修改密码成功
+2019-05-09 22:54:37,086 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:54:37,099 [15] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:54:38,928 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 跳转编辑收货地址页面
+2019-05-09 22:54:40,299 [8] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:54:40,312 [36] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:55:33,973 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 跳转编辑收货地址页面
+2019-05-09 22:55:35,375 [18] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:55:35,533 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:59:05,758 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:59:06,790 [3] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:59:08,851 [4] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 跳转编辑收货地址页面
+2019-05-09 22:59:10,245 [12] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:59:10,265 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:59:17,107 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:59:17,149 [21] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:59:40,709 [12] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:59:40,727 [12] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 22:59:43,920 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 22:59:43,942 [39] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:13,051 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 23:00:13,065 [18] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:23,877 [4] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 获取收货地址
+2019-05-09 23:00:23,895 [21] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取收货地址成功[
+  {
+    "keyId": 1,
+    "name": "左佳成",
+    "local": "重庆",
+    "addres": "重庆市渝北区",
+    "zipCode": 400133,
+    "phone": "13193119597",
+    "userId": 197
+  },
+  {
+    "keyId": 2,
+    "name": "右减除",
+    "local": "南京",
+    "addres": "南京市大兴区",
+    "zipCode": 54445,
+    "phone": "45151515",
+    "userId": 197
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:30,553 [21] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 23:00:30,586 [37] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:30,638 [37] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 23:00:34,195 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 23:00:34,222 [45] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:37,833 [4] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 23:00:37,848 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:43,503 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的已购商品
+2019-05-09 23:00:43,518 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取已购商品成功[
+  {
+    "orderId": "104b06da-89a1-4bda-a5f6-ec10197c5285",
+    "goodId": 1,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "无敌大裙子",
+    "price": 2333.00
+  },
+  {
+    "orderId": "7fe74f16-44cb-4a30-924d-ca328e028e65",
+    "goodId": 5,
+    "userId": 197,
+    "goodNumber": 13,
+    "orderState": 4,
+    "name": "西西卡",
+    "evaluate": "差评",
+    "price": 34444.00
+  },
+  {
+    "orderId": "a771eafe-e555-4435-b933-b2cef3392bd1",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 5,
+    "orderState": 4,
+    "name": "无敌大空调",
+    "price": 66767.00
+  },
+  {
+    "orderId": "bd469949-0c54-4a85-99d5-1a73df80075b",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d8be23e6-0e8c-41fb-a6ca-43da284880a1",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "嘻嘻",
+    "price": 123.00
+  },
+  {
+    "orderId": "d9095d32-a537-4a27-8616-8ccecd4618a2",
+    "goodId": 6,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 2,
+    "name": "哼哼哈兮",
+    "price": 9797.00
+  },
+  {
+    "orderId": "f61806bb-1688-431b-9697-2b3870ce2c13",
+    "goodId": 4,
+    "userId": 197,
+    "goodNumber": 2,
+    "orderState": 3,
+    "name": "无敌大空调",
+    "price": 66767.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:49,907 [4] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的收藏
+2019-05-09 23:00:49,934 [4] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的收藏成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:00:54,817 [21] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 23:00:54,830 [42] INFO  Graduation.Controllers.LoginController [(null)] - 获取我的购物车列表成功[]
+2019-05-09 23:01:04,065 [4] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 23:01:04,086 [21] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 0,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:04,131 [21] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 23:01:05,999 [37] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品详情
+2019-05-09 23:01:06,010 [21] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 0,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:07,040 [45] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 编辑收藏
+2019-05-09 23:01:07,230 [38] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>编辑收藏成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 1,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:08,089 [45] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 添加购物车商品
+2019-05-09 23:01:08,147 [12] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品详情成功{
+  "goodId": 7,
+  "name": "嘻嘻",
+  "price": 123.00,
+  "stock": 22,
+  "sold": 0,
+  "details": "是的手动挡",
+  "type": "生活用品",
+  "facount": 1,
+  "createtime": "2019-05-08 18:34:23"
+}</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:08,180 [12] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>添加购物车商品成功{
+  "orderId": "b6f67eec-62de-4fcf-9ebc-9e7423339e01",
+  "goodId": 7,
+  "userId": 197,
+  "goodNumber": 1,
+  "orderState": 1,
+  "name": "嘻嘻",
+  "price": 123.00
+}</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:09,392 [4] INFO  Graduation.Controllers.LoginController [(null)] - zjc || Get into 我的购物车
+2019-05-09 23:01:09,404 [21] INFO  Graduation.Controllers.LoginController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取我的购物车列表成功[
+  {
+    "orderId": "b6f67eec-62de-4fcf-9ebc-9e7423339e01",
+    "goodId": 7,
+    "userId": 197,
+    "goodNumber": 1,
+    "orderState": 1,
+    "name": "嘻嘻",
+    "price": 123.00
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:15,801 [4] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 23:01:15,820 [4] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 1,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:15,854 [4] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 23:01:19,281 [37] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 商品列表
+2019-05-09 23:01:19,301 [37] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取分类商品列表成功[
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:19,337 [37] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]
+2019-05-09 23:01:21,214 [12] INFO  Graduation.Controllers.IndexController [(null)] - zjc || Get into 首页
+2019-05-09 23:01:21,232 [12] INFO  Graduation.Controllers.IndexController [(null)] - <log4net.Error>Exception during StringFormat: Input string was not in a correct format. <format>获取商品列表成功[
+  {
+    "goodId": 1,
+    "name": "无敌大裙子",
+    "price": 2333.00,
+    "stock": 211,
+    "sold": 33,
+    "details": "我依旧是 西蜀霸王！！",
+    "type": "男女服装",
+    "facount": 1,
+    "createtime": "2019-05-01 21:13:53"
+  },
+  {
+    "goodId": 2,
+    "name": "无敌大菠萝",
+    "price": 60000.00,
+    "stock": 3123,
+    "sold": 444,
+    "type": "零食水果",
+    "facount": 5,
+    "createtime": "2019-04-25 21:15:15"
+  },
+  {
+    "goodId": 6,
+    "name": "哼哼哈兮",
+    "price": 9797.00,
+    "stock": 23,
+    "sold": 3,
+    "type": "男女服装",
+    "facount": 69,
+    "createtime": "2019-05-05 14:19:52"
+  },
+  {
+    "goodId": 7,
+    "name": "嘻嘻",
+    "price": 123.00,
+    "stock": 22,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "生活用品",
+    "facount": 1,
+    "createtime": "2019-05-08 18:34:23"
+  },
+  {
+    "goodId": 8,
+    "name": "我去",
+    "price": 233.00,
+    "stock": 233,
+    "sold": 0,
+    "details": "是的手动挡",
+    "type": "其他商品",
+    "facount": 0,
+    "createtime": "2019-05-08 19:05:13"
+  }
+]</format><args>{}</args></log4net.Error>
+2019-05-09 23:01:21,271 [12] INFO  Graduation.Controllers.IndexController [(null)] - 获取类型列表成功[
+  "男女服装",
+  "鞋包配饰",
+  "数码产品",
+  "家居环境",
+  "生活用品",
+  "零食水果",
+  "美容美妆",
+  "其他商品"
+]

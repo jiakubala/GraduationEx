@@ -1,0 +1,60 @@
+﻿@model List<Graduation.Models.Good>
+@{
+    ViewData["Title"] = "Allgoodlist";
+}
+
+@{var UserName = ViewData["UserName"];}
+<h2>商品列表</h2>
+<link rel="stylesheet" href="~/bootstrap/css/bootstrap.css" />
+<table class="table">
+    <thead>
+        <tr>
+            <th><span>商品名</span></th>
+            <th><span>单价</span></th>
+            <th><span>已售</span></th>
+            <th><span>库存</span></th>
+            <th><span>类型</span></th>
+            <th><span>收藏数</span></th>
+            <th><span>创建时间</span></th>
+            <th><span>描述</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="/Index/Goodlistbranchdetails?goodid=@item.GoodId">@item.Name</a>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sold)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Facount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Createtime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Details)
+                </td>
+                <td>
+                    <form asp-action="Deletegood">
+                        <input type="hidden" name="goodid" value="@item.GoodId" />
+                        <input type="submit" value="删除">
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

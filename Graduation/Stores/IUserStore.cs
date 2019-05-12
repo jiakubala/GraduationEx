@@ -16,7 +16,7 @@ namespace Graduation.Stores
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        Task<User> Userupdate(User user);
+        Task Userupdate(User user);
 
         /// <summary>
         /// 查询User实体
@@ -25,6 +25,14 @@ namespace Graduation.Stores
         /// <param name="query"></param>
         /// <returns></returns>
         Task<TResult> GetuserAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query);
+
+        /// <summary>
+        /// 查询用户列表
+        /// </summary>
+        /// <typeparam name="TResult"></typeparam>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        Task<List<TResult>> GetuserlistAsync<TResult>(Func<IQueryable<User>, IQueryable<TResult>> query);
 
         /// <summary>
         /// 查询Address
@@ -62,5 +70,7 @@ namespace Graduation.Stores
         /// <param name="add"></param>
         /// <returns></returns>
         Task Addressdelete(Address add);
+
+        Task Userdelete(User user);
     }
 }

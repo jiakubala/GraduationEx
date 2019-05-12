@@ -15,10 +15,74 @@ namespace Graduation.Managers
     {
         protected IUserStore _userStore { get; }
         protected IIndexStore _indexStore { get; }
-        public UserManager(IUserStore userStore, IIndexStore indexStore)
+        protected ILoginStore _loginStore { get; }
+        public UserManager(IUserStore userStore, IIndexStore indexStore, ILoginStore loginStore)
         {
             _userStore = userStore;
             _indexStore = indexStore;
+            _loginStore = loginStore;
+        }
+
+        /// <summary>
+        /// 查询User实体
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        public async Task<User> Userqurey(int? userid)
+        {
+            try
+            {
+                return await _userStore.GetuserAsync(a => a.Where(b => b.UserId == userid));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 获取用户列表
+        /// </summary>
+        /// <returns></returns>
+        public async Task<List<User>> Userlistqurey()
+        {
+            try
+            {
+                return await _userStore.GetuserlistAsync(a => a.Where(b => b.UserId != null));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 修改密码
+        /// </summary>
+        /// <param name="pas"></param>
+        /// <returns></returns>
+        public async Task<bool> Psupdate(PasswordRequest pas)
+        {
+            try
+            {
+                var old = await _userStore.GetuserAsync(a => a.Where(b => b.UserId == pas.UserId));
+                var model = await _loginStore.GetAsync(a => a.Where(b => b.Password == pas.Oldpassword && b.UserId == pas.UserId));
+                if (model == null)
+                {
+                    return false;
+                }
+                if (pas.Newpassword != pas.Upassword)
+                {
+                    return false;
+                }
+                old.Password = pas.Newpassword;
+                await _userStore.Userupdate(old);
+                return true;
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
         /// <summary>
@@ -26,32 +90,37 @@ namespace Graduation.Managers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async Task<User> Userupdate(User user)
+        public async Task Userupdate(User user)
         {
             try
             {
-                if (user.Password != null)
-                {
-                    //修改密码
-                    return await _userStore.Userupdate(new User
-                    {
-                        Password = user.Password
-                    });
-                }
+                var old = await _userStore.GetuserAsync(a => a.Where(b => b.UserId == user.UserId));
                 if (user.Name == null)
                 {
-                    //显示个人资料
-                    return await _userStore.GetuserAsync(a => a.Where(b => b.UserId == user.UserId));
+                    user.Name = old.Name;
+                }
+                if (user.Email == null)
+                {
+                    user.Email = old.Email;
+                }
+                if (user.TrueName == null)
+                {
+                    user.TrueName = old.TrueName;
+                }
+                if (user.Sex == null)
+                {
+                    user.Sex = old.Sex;
+                }
+                if (user.Phone == null)
+                {
+                    user.Phone = old.Phone;
+                }
+                if (user.Password == null)
+                {
+                    user.Password = old.Password;
                 }
                 //修改个人资料
-                return await _userStore.Userupdate(new User
-                {
-                    Name = user.Name,
-                    Email = user.Email,
-                    TrueName = user.TrueName,
-                    Phone = user.Phone,
-                    Sex = user.Sex
-                });
+                await _userStore.Userupdate(user);
             }
             catch (Exception e)
             {
@@ -64,7 +133,7 @@ namespace Graduation.Managers
         /// </summary>
         /// <param name="userid"></param>
         /// <returns></returns>
-        public async Task<List<Good>> Getfavorite(int userid)
+        public async Task<List<Good>> Getfavorite(int? userid)
         {
             try
             {
@@ -123,7 +192,7 @@ namespace Graduation.Managers
         /// </summary>
         /// <param name="userid"></param>
         /// <returns></returns>
-        public async Task<List<Address>> GetAddressesAsync(int userid)
+        public async Task<List<Address>> GetAddressesAsync(int? userid)
         {
             try
             {
@@ -144,14 +213,7 @@ namespace Graduation.Managers
         {
             try
             {
-                return await _userStore.Addressupdate(new Address
-                {
-                    Name = add.Name,
-                    Local = add.Local,
-                    Addres = add.Addres,
-                    ZipCode = add.ZipCode,
-                    Phone = add.Phone,
-                });
+                return await _userStore.Addressupdate(add);
             }
             catch (Exception e)
             {
@@ -168,14 +230,7 @@ namespace Graduation.Managers
         {
             try
             {
-                return await _userStore.Addressadd(new Address
-                {
-                    Name = add.Name,
-                    Local = add.Local,
-                    Addres = add.Addres,
-                    ZipCode = add.ZipCode,
-                    Phone = add.Phone,
-                });
+                return await _userStore.Addressadd(add);
             }
             catch (Exception e)
             {
@@ -201,5 +256,39 @@ namespace Graduation.Managers
             }
         }
 
+        /// <summary>
+        /// 获取收货地址实体
+        /// </summary>
+        /// <param name="keyid"></param>
+        /// <returns></returns>
+        public async Task<Address> GetAddAsync(int keyid)
+        {
+            try
+            {
+                return await _userStore.GetAsync(a => a.Where(b => b.KeyId == keyid));
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
+        /// <summary>
+        /// 封禁用户
+        /// </summary>
+        /// <param name="userid"></param>
+        /// <returns></returns>
+        public async Task DeleteuserAsync(int userid)
+        {
+            try
+            {
+                var user = await _userStore.GetuserAsync(a => a.Where(b => b.UserId == userid));
+                await _userStore.Userdelete(user);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
     }
 }
